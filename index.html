@@ -1275,11 +1275,11 @@
         let usedCity = 'Delhi';
 
         try {
-          // 1. Try to fetch directly from public bullion data sources with CORS enabled
+          // 1. Try to fetch directly from public bullion data sources with CORS enabled via free proxy
           try {
             const selectedCity = document.getElementById('rate-city-select')?.value || 'Delhi';
-            const goldResponse = await fetch("https://resources.groww.in/web-assets/json/growth/gold-rates.json");
-            const silverResponse = await fetch("https://resources.groww.in/web-assets/json/growth/silver-rates.json");
+            const goldResponse = await fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent("https://resources.groww.in/web-assets/json/growth/gold-rates.json"));
+            const silverResponse = await fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent("https://resources.groww.in/web-assets/json/growth/silver-rates.json"));
 
             if (goldResponse.ok && silverResponse.ok) {
               const goldData = await goldResponse.json();
