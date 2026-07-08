@@ -1272,15 +1272,30 @@
         let fetchedFromDirectAPI = false;
         let usedCity = 'Delhi';
 
+        console.log("=== LIVE RATES ENGINE STARTED ===");
         try {
-          // 1. Fetch directly from Groww API
+          // Fetch directly from Groww API
           const selectedCity = document.getElementById('rate-city-select')?.value || 'Delhi';
-          const goldResponse = await fetch("https://resources.groww.in/web-assets/json/growth/gold-rates.json");
-          const silverResponse = await fetch("https://resources.groww.in/web-assets/json/growth/silver-rates.json");
+          console.log(`Selected target city for rates: ${selectedCity}`);
+
+          const goldUrl = "https://resources.groww.in/web-assets/json/growth/gold-rates.json";
+          const silverUrl = "https://resources.groww.in/web-assets/json/growth/silver-rates.json";
+
+          console.log(`Fetching gold from: ${goldUrl}`);
+          console.log(`Fetching silver from: ${silverUrl}`);
+
+          const goldResponse = await fetch(goldUrl);
+          const silverResponse = await fetch(silverUrl);
+
+          console.log(`Gold HTTP Status: ${goldResponse.status} (${goldResponse.statusText})`);
+          console.log(`Silver HTTP Status: ${silverResponse.status} (${silverResponse.statusText})`);
 
           if (goldResponse.ok && silverResponse.ok) {
             const goldData = await goldResponse.json();
             const silverData = await silverResponse.json();
+
+            console.log("Gold data successfully parsed:", goldData);
+            console.log("Silver data successfully parsed:", silverData);
 
             if (goldData && goldData.rates && silverData && silverData.rates) {
               const goldEntry = goldData.rates.find(r => r.city.toLowerCase() === selectedCity.toLowerCase());
@@ -1289,25 +1304,31 @@
               const finalGoldEntry = goldEntry || goldData.rates.find(r => r.city.toLowerCase() === 'delhi') || goldData.rates[0];
               const finalSilverEntry = silverEntry || silverData.rates.find(r => r.city.toLowerCase() === 'delhi') || silverData.rates[0];
 
+              console.log("Selected gold entry:", finalGoldEntry);
+              console.log("Selected silver entry:", finalSilverEntry);
+
               if (finalGoldEntry && finalSilverEntry) {
                 // todayPrice from Groww is per 2g for gold, per 3g for silver
                 const gold24kPerGram = finalGoldEntry.todayPrice / 2;
                 const silverPerGram = finalSilverEntry.todayPrice / 3;
+
+                console.log(`Calculated Raw Per Gram Rates: Gold 24K = ₹${gold24kPerGram}/g, Silver = ₹${silverPerGram}/g`);
 
                 currentRates.gold24k = Math.round(gold24kPerGram);
                 currentRates.gold22k = Math.round(gold24kPerGram * 0.9167); // 22K (91.67% purity)
                 currentRates.gold18k = Math.round(gold24kPerGram * 0.75);   // 18K (75.00% purity)
                 currentRates.silver = Math.round(silverPerGram);
 
+                console.log("Updated state currentRates:", currentRates);
+
                 fetchedFromDirectAPI = true;
                 usedCity = finalGoldEntry.city;
-                console.log(`Successfully updated live rates directly from Groww for ${usedCity}`);
               }
             }
           }
 
           if (!fetchedFromDirectAPI) {
-            throw new Error("Could not parse rates from Groww response data");
+            throw new Error(`Could not parse rates from Groww response data. Gold status: ${goldResponse.status}, Silver status: ${silverResponse.status}`);
           }
 
           updateRatesUI();
@@ -1317,12 +1338,19 @@
             const now = new Date();
             rateStatus.textContent = `Updated: Today, ${now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} via Live Bullion (${usedCity})`;
           }
+          console.log("=== LIVE RATES ENGINE COMPLETED SUCCESSFULLY ===");
         } catch (error) {
           console.error('Error fetching live gold rates:', error);
+          
           // Keep offline default rates as static fallback
           updateRatesUI();
           calculateEstimate();
-          if (rateStatus) rateStatus.textContent = 'Indicative store prices';
+          
+          if (rateStatus) {
+            rateStatus.textContent = 'Indicative store prices';
+            // Show a temporary console hint for debugging
+            console.warn("Rates engine fell back to static defaults. If this is a CORS block in your browser, it is because resources.groww.in does not allow direct cross-origin fetches in some browser sandboxes. Your static store rates remain fully interactive and functional!");
+          }
         } finally {
           if (refreshBtn) refreshBtn.classList.remove('animate-spin');
         }
