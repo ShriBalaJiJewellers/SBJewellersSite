@@ -1,6 +1,6 @@
 {
-  "name": "Shree Balaji Jewellers",
-  "description": "Official showcase website for Shree Balaji Jewellers. Explore exquisite gold, silver, and bridal jewellery collections, view live gold/silver rates, estimate prices with our interactive calculator, and contact the store.",
+  "name": "Shri Balaji Jewellers",
+  "description": "Official showcase website for Shri Balaji Jewellers. Explore exquisite gold, silver, and bridal jewellery collections, view live gold/silver rates, estimate prices with our interactive calculator, and contact the store.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
