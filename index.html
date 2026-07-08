@@ -327,7 +327,17 @@
                     TODAY'S STORE RATES
                   </h3>
                 </div>
-                <div class="flex items-center gap-3">
+                <div class="flex flex-wrap items-center gap-2.5">
+                  <select id="rate-city-select" onchange="fetchLiveRates()" class="bg-zinc-950 text-[10px] text-zinc-400 border border-zinc-800 rounded-xs py-1 px-2.5 focus:outline-none focus:border-gold-500 font-mono font-medium cursor-pointer shadow-sm">
+                    <option value="Delhi" selected>Delhi (NCR)</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Kerala">Kerala</option>
+                  </select>
                   <span id="rate-status" class="text-[10px] font-mono text-zinc-500">Fetching live rates...</span>
                   <button id="refresh-rates-trigger" onclick="fetchLiveRates()" class="p-1.5 border border-zinc-800 hover:border-gold-400 rounded-sm bg-black hover:text-gold-300 transition-all duration-300 focus:outline-none cursor-pointer" title="Refresh Live Rates">
                     <i id="refresh-rates-btn" data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
@@ -1062,7 +1072,7 @@
 
 
     <!-- Embedded Vanilla JS logic engines -->
-    <script>
+    <script type="module">
       // 1. App Catalogue Data Source
       const collectionsData = [
         {
@@ -1259,40 +1269,200 @@
         if (refreshBtn) refreshBtn.classList.add('animate-spin');
         if (rateStatus) rateStatus.textContent = 'Updating rates...';
 
+        let fetchedFromDirectAPI = false;
+        let fetchedFromGoldApi = false;
+        let isFallback = false;
+        let usedCity = 'Delhi';
+
         try {
-          // Open Access Exchange Rate API - 100% Free, no keys required
-          const response = await fetch('https://open.er-api.com/v6/latest/USD');
-          if (!response.ok) throw new Error('Failed to fetch global rates.');
-          const data = await response.json();
-          
-          if (data && data.rates) {
-            const inrRate = data.rates.INR; // e.g. 83.5
-            const xauRate = data.rates.XAU; // ounces of gold per 1 USD
-            const xagRate = data.rates.XAG; // ounces of silver per 1 USD
-            
-            if (inrRate && xauRate && xagRate) {
-              // 1 Troy Ounce = 31.1034768 grams
-              const gold24kPerGram = (1 / xauRate * inrRate) / 31.1034768;
-              const silverPerGram = (1 / xagRate * inrRate) / 31.1034768;
-              
-              if (gold24kPerGram > 1000 && silverPerGram > 10) {
-                currentRates.gold24k = Math.round(gold24kPerGram);
-                currentRates.gold22k = Math.round(gold24kPerGram * 0.9167);
-                currentRates.gold18k = Math.round(gold24kPerGram * 0.75);
-                currentRates.silver = Math.round(silverPerGram);
-                
-                updateRatesUI();
-                calculateEstimate();
-                
-                if (rateStatus) {
-                  const now = new Date();
-                  rateStatus.textContent = `Updated: Today, ${now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+          // 1. Try to fetch directly from public bullion data sources with CORS enabled
+          try {
+            const selectedCity = document.getElementById('rate-city-select')?.value || 'Delhi';
+            const goldResponse = await fetch("https://resources.groww.in/web-assets/json/growth/gold-rates.json");
+            const silverResponse = await fetch("https://resources.groww.in/web-assets/json/growth/silver-rates.json");
+
+            if (goldResponse.ok && silverResponse.ok) {
+              const goldData = await goldResponse.json();
+              const silverData = await silverResponse.json();
+
+              if (goldData && goldData.rates && silverData && silverData.rates) {
+                const goldEntry = goldData.rates.find(r => r.city.toLowerCase() === selectedCity.toLowerCase());
+                const silverEntry = silverData.rates.find(r => r.city.toLowerCase() === selectedCity.toLowerCase());
+
+                const finalGoldEntry = goldEntry || goldData.rates.find(r => r.city.toLowerCase() === 'delhi') || goldData.rates[0];
+                const finalSilverEntry = silverEntry || silverData.rates.find(r => r.city.toLowerCase() === 'delhi') || silverData.rates[0];
+
+                if (finalGoldEntry && finalSilverEntry) {
+                  // todayPrice from this source is per 2g for gold, per 3g for silver
+                  const gold24kPerGram = finalGoldEntry.todayPrice / 2;
+                  const silverPerGram = finalSilverEntry.todayPrice / 3;
+
+                  currentRates.gold24k = Math.round(gold24kPerGram);
+                  currentRates.gold22k = Math.round(gold24kPerGram * 0.9167); // 22K (91.67% purity)
+                  currentRates.gold18k = Math.round(gold24kPerGram * 0.75);   // 18K (75.00% purity)
+                  currentRates.silver = Math.round(silverPerGram);
+
+                  fetchedFromDirectAPI = true;
+                  usedCity = finalGoldEntry.city;
+                  console.log(`Successfully updated live rates directly from bullion source for ${usedCity}`);
                 }
+              }
+            } else {
+              console.warn(`Bullion data response not OK. Trying GoldAPI...`);
+            }
+          } catch (directApiError) {
+            console.error("Direct bullion fetch failed. Trying GoldAPI...", directApiError);
+          }
+
+          // 2. Try to fetch from goldapi.io if direct API failed and API key is provided
+          if (!fetchedFromDirectAPI) {
+            const goldApiKey = import.meta.env.VITE_GOLD_API_KEY || '';
+            if (goldApiKey && goldApiKey.trim() !== '') {
+              try {
+                const goldHeaders = new Headers();
+                goldHeaders.append("x-access-token", goldApiKey.trim());
+                goldHeaders.append("Content-Type", "application/json");
+
+                const requestOptions = {
+                  method: 'GET',
+                  headers: goldHeaders
+                };
+
+                const goldRes = await fetch("https://www.goldapi.io/api/XAU/INR", requestOptions);
+                const silverRes = await fetch("https://www.goldapi.io/api/XAG/INR", requestOptions);
+
+                if (goldRes.ok && silverRes.ok) {
+                  const goldData = await goldRes.json();
+                  const silverData = await silverRes.json();
+
+                  if (goldData && silverData) {
+                    let gold24k = goldData.price_gram_24k || (goldData.price ? (goldData.price / 31.1034768) : null);
+                    let silverVal = silverData.price_gram_24k || silverData.price_gram || (silverData.price ? (silverData.price / 31.1034768) : null);
+
+                    if (gold24k && silverVal && gold24k > 1000 && silverVal > 10) {
+                      const DOMESTIC_GOLD_PREMIUM = 1.15; // align raw rate with India's domestic retail rates
+                      const DOMESTIC_SILVER_PREMIUM = 1.06; // align raw rate with India's domestic retail rates
+
+                      const gold24kPerGram = gold24k * DOMESTIC_GOLD_PREMIUM;
+                      const silverPerGram = silverVal * DOMESTIC_SILVER_PREMIUM;
+
+                      currentRates.gold24k = Math.round(gold24kPerGram);
+                      currentRates.gold22k = Math.round(gold24kPerGram * 0.9167); // 22K (91.67% purity)
+                      currentRates.gold18k = Math.round(gold24kPerGram * 0.75);   // 18K (75.00% purity)
+                      currentRates.silver = Math.round(silverPerGram);
+
+                      fetchedFromGoldApi = true;
+                      console.log("Successfully updated live rates using goldapi.io");
+                    }
+                  }
+                } else {
+                  console.warn(`GoldAPI.io response not OK. Gold: ${goldRes.status}, Silver: ${silverRes.status}. Falling back...`);
+                }
+              } catch (goldApiError) {
+                console.error("GoldAPI.io fetch failed. Falling back...", goldApiError);
               }
             }
           }
+
+          // 3. Fallback to keyless open API if both direct API and GoldAPI failed
+          if (!fetchedFromDirectAPI && !fetchedFromGoldApi) {
+            isFallback = true;
+            // Fetch USD to INR exchange rate (100% Free, no keys required)
+            const response = await fetch('https://open.er-api.com/v6/latest/USD');
+            if (!response.ok) throw new Error('Failed to fetch exchange rates.');
+            const exchangeData = await response.json();
+            
+            let inrRate = 83.5; // default fallback exchange rate
+            if (exchangeData && exchangeData.rates && exchangeData.rates.INR) {
+              inrRate = exchangeData.rates.INR;
+            }
+            
+            let goldUsdPerOunce = null;
+            let silverUsdPerOunce = null;
+            
+            // Fetch live gold spot price in USD per troy ounce from gold-api.com (free open API)
+            try {
+              const goldRes = await fetch('https://api.gold-api.com/v1/gold');
+              if (goldRes.ok) {
+                const goldData = await goldRes.json();
+                if (goldData && goldData.price) {
+                  goldUsdPerOunce = goldData.price;
+                }
+              }
+            } catch (goldError) {
+              console.warn('Failed to fetch gold from primary gold-api.com:', goldError);
+            }
+            
+            // Fetch live silver spot price in USD per troy ounce from gold-api.com (free open API)
+            try {
+              const silverRes = await fetch('https://api.gold-api.com/v1/silver');
+              if (silverRes.ok) {
+                const silverData = await silverRes.json();
+                if (silverData && silverData.price) {
+                  silverUsdPerOunce = silverData.price;
+                }
+              }
+            } catch (silverError) {
+              console.warn('Failed to fetch silver from primary gold-api.com:', silverError);
+            }
+            
+            let gold24kPerGram = null;
+            let silverPerGram = null;
+            
+            // Calculate prices per gram in INR using the fetched rates
+            if (goldUsdPerOunce && silverUsdPerOunce) {
+              // 1 Troy Ounce = 31.1034768 grams
+              const rawGold24kPerGram = (goldUsdPerOunce / 31.1034768) * inrRate;
+              const rawSilverPerGram = (silverUsdPerOunce / 31.1034768) * inrRate;
+              
+              const DOMESTIC_GOLD_PREMIUM = 1.15;
+              const DOMESTIC_SILVER_PREMIUM = 1.06;
+              
+              gold24kPerGram = rawGold24kPerGram * DOMESTIC_GOLD_PREMIUM;
+              silverPerGram = rawSilverPerGram * DOMESTIC_SILVER_PREMIUM;
+            } else if (exchangeData && exchangeData.rates && exchangeData.rates.XAU && exchangeData.rates.XAG) {
+              // Fallback to metals rates in er-api if available
+              const xauRate = exchangeData.rates.XAU; 
+              const xagRate = exchangeData.rates.XAG; 
+              
+              const rawGold24kPerGram = (1 / xauRate * inrRate) / 31.1034768;
+              const rawSilverPerGram = (1 / xagRate * inrRate) / 31.1034768;
+              
+              const DOMESTIC_GOLD_PREMIUM = 1.15;
+              const DOMESTIC_SILVER_PREMIUM = 1.06;
+              
+              gold24kPerGram = rawGold24kPerGram * DOMESTIC_GOLD_PREMIUM;
+              silverPerGram = rawSilverPerGram * DOMESTIC_SILVER_PREMIUM;
+            }
+            
+            if (gold24kPerGram && silverPerGram && gold24kPerGram > 1000 && silverPerGram > 10) {
+              currentRates.gold24k = Math.round(gold24kPerGram);
+              currentRates.gold22k = Math.round(gold24kPerGram * 0.9167); // 22K (91.67% purity)
+              currentRates.gold18k = Math.round(gold24kPerGram * 0.75);   // 18K (75.00% purity)
+              currentRates.silver = Math.round(silverPerGram);
+            } else {
+              throw new Error("Could not calculate realistic rates from fallback source");
+            }
+          }
+
+          updateRatesUI();
+          calculateEstimate();
+          
+          if (rateStatus) {
+            const now = new Date();
+            let sourceInfo = 'via Live Spot';
+            if (fetchedFromDirectAPI) {
+              sourceInfo = `via Live Bullion (${usedCity})`;
+            } else if (fetchedFromGoldApi) {
+              sourceInfo = 'via Live Bullion (Global)';
+            }
+            rateStatus.textContent = `Updated: Today, ${now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} ${sourceInfo}`;
+          }
         } catch (error) {
-          console.error('Error fetching gold rates:', error);
+          console.error('Error fetching live gold rates:', error);
+          // If all fetches fail, keep using current fallbacks, update UI
+          updateRatesUI();
+          calculateEstimate();
           if (rateStatus) rateStatus.textContent = 'Indicative store prices';
         } finally {
           if (refreshBtn) refreshBtn.classList.remove('animate-spin');
@@ -1356,14 +1526,17 @@
         window.open(`https://wa.me/916396330055?text=${encodeURIComponent(text)}`, '_blank');
       }
 
-      // Initializer on window loads
-      window.addEventListener('DOMContentLoaded', () => {
+      // Initializer/Bootstrapper
+      function initApp() {
         // Initialize lucide icons
         lucide.createIcons();
 
         // Dynamically build copyright year
         const cy = new Date().getFullYear();
-        document.getElementById('copyright-text').innerHTML = `&copy; ${cy} Shree Balaji Jewellers. All Rights Reserved.`;
+        const copyrightEl = document.getElementById('copyright-text');
+        if (copyrightEl) {
+          copyrightEl.innerHTML = `&copy; ${cy} Shree Balaji Jewellers. All Rights Reserved.`;
+        }
 
         // Render Catalogue
         renderCatalogueCards();
@@ -1379,6 +1552,7 @@
         // Scroll spy header effect
         window.addEventListener('scroll', () => {
           const header = document.getElementById('main-header');
+          if (!header) return;
           if (window.scrollY > 50) {
             header.classList.add('bg-[#0a0a0ae0]', 'backdrop-blur-md', 'shadow-2xl', 'border-zinc-900', 'py-1');
             header.classList.remove('border-transparent');
@@ -1392,7 +1566,14 @@
         setInterval(() => {
           navigateHeroSlide(1);
         }, 6000);
-      });
+      }
+
+      // Safe execution checking readyState to handle delayed module loading
+      if (document.readyState === 'loading') {
+        window.addEventListener('DOMContentLoaded', initApp);
+      } else {
+        initApp();
+      }
 
       // --- HERO BANNER CONTROLLER ---
       function setHeroSlide(idx) {
@@ -1697,6 +1878,28 @@
       function openGoogleMapDirections() {
         window.open('https://maps.google.com/?q=Shree+Balaji+Jewellers+Pilkhuwa+Hapur+Uttar+Pradesh', '_blank');
       }
+
+      // Bind all interactive functions to window scope for HTML inline handlers to work in ES module
+      window.fetchLiveRates = fetchLiveRates;
+      window.updateRatesUI = updateRatesUI;
+      window.calculateEstimate = calculateEstimate;
+      window.sendCalculatorWhatsApp = sendCalculatorWhatsApp;
+      window.setHeroSlide = setHeroSlide;
+      window.navigateHeroSlide = navigateHeroSlide;
+      window.scrollToSection = scrollToSection;
+      window.toggleMobileMenu = toggleMobileMenu;
+      window.setCollectionFilter = setCollectionFilter;
+      window.renderCatalogueCards = renderCatalogueCards;
+      window.triggerDirectInquiry = triggerDirectInquiry;
+      window.triggerWhatsAppInquiry = triggerWhatsAppInquiry;
+      window.openProductModal = openProductModal;
+      window.closeProductModal = closeProductModal;
+      window.toggleAboutModal = toggleAboutModal;
+      window.renderReviewDots = renderReviewDots;
+      window.selectReviewIdx = selectReviewIdx;
+      window.toggleReviewForm = toggleReviewForm;
+      window.submitCustomReview = submitCustomReview;
+      window.openGoogleMapDirections = openGoogleMapDirections;
     </script>
   </body>
 </html>
