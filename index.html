@@ -1309,10 +1309,10 @@
 
               if (finalGoldEntry && finalSilverEntry) {
                 // todayPrice from Groww is per 2g for gold, per 3g for silver
-                const gold24kPerGram = finalGoldEntry.todayPrice / 2;
-                const silverPerGram = finalSilverEntry.todayPrice / 3;
+                const gold24kPerGram = finalGoldEntry.todayPrice;
+                const silverPerGram = finalSilverEntry.todayPrice;
 
-                console.log(`Calculated Raw Per Gram Rates: Gold 24K = ₹${gold24kPerGram}/g, Silver = ₹${silverPerGram}/g`);
+                //console.log(`Calculated Raw Per Gram Rates: Gold 24K = ₹${gold24kPerGram}/g, Silver = ₹${silverPerGram}/g`);
 
                 currentRates.gold24k = Math.round(gold24kPerGram);
                 currentRates.gold22k = Math.round(gold24kPerGram * 0.9167); // 22K (91.67% purity)
