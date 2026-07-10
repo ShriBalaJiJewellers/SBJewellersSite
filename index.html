@@ -67,6 +67,56 @@
       ]
     }
     </script>
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Theme Customizations -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+              display: ['Cinzel', 'serif'],
+            },
+            colors: {
+              gold: {
+                50: '#fbf8f1',
+                100: '#f4edd9',
+                200: '#e8d7b3',
+                300: '#dbbd84',
+                400: '#ce9f57',
+                500: '#bfa36c', /* Elegant metallic gold */
+                600: '#a38450',
+                700: '#85663b',
+                800: '#664d2b',
+                900: '#49351d',
+                950: '#291d0e',
+              },
+              luxury: {
+                dark: '#0a0a0a',
+                card: '#121212',
+                border: '#242424',
+              }
+            },
+            animation: {
+              'spin-slow': 'spin 12s linear infinite',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
 
     <!-- Custom Luxury Scrollbar and Smooth animations -->
     <style type="text/css">
