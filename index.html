@@ -58,22 +58,22 @@
     <!-- Custom Luxury Scrollbar and Smooth animations -->
     <style type="text/css">
       body {
-        background-color: #0a0a0a;
-        color: #f3f4f6;
+        background-color: #faf8f5;
+        color: #1c1917;
         font-family: 'Inter', sans-serif;
       }
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Cinzel', serif;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.08em;
       }
       ::-webkit-scrollbar {
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #0a0a0a;
+        background: #faf8f5;
       }
       ::-webkit-scrollbar-thumb {
-        background: #2a2a2a;
+        background: #e7e2d6;
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
@@ -87,49 +87,50 @@
   <body class="selection:bg-gold-500 selection:text-black antialiased overflow-x-hidden">
 
     <!-- Top Announcement Bar -->
-    <div class="bg-[#050505] border-b border-zinc-900 text-xs py-2 px-4 md:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 font-light text-zinc-400 z-50 relative">
+    <div class="bg-[#1c140e] border-b border-[#31251c] text-xs py-2.5 px-4 md:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 font-light text-stone-300 z-50 relative">
       <div class="flex items-center gap-2 hover:text-gold-300 transition-colors cursor-pointer" onclick="scrollToSection('about')">
         <i data-lucide="map-pin" class="text-gold-400 w-3.5 h-3.5"></i>
-        <span>Pillar Number - 45, Behind the Rajputana Regiment College Village Khera Road, Pilkhuwa (Hapur), 245304.</span>
+        <span class="font-sans text-[11px] tracking-wide">Pillar Number - 45, Behind the Rajputana Regiment College, Pilkhuwa (Hapur), 245304</span>
       </div>
-      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 font-sans text-[11px]">
         <a href="https://instagram.com/sbj_jewels0102" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-gold-300 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>          <span>Follow us on Instagram: @sbj_jewels0102</span>
+          <i data-lucide="instagram" class="text-gold-400 w-3.5 h-3.5"></i>
+          <span>@sbj_jewels0102</span>
         </a>
         <a href="tel:+916396330055" class="flex items-center gap-1.5 hover:text-gold-300 transition-colors">
           <i data-lucide="phone" class="text-gold-400 w-3.5 h-3.5"></i>
-          <span>Call Us: +91 63963 30055</span>
+          <span>Call: +91 63963 30055</span>
         </a>
       </div>
     </div>
 
     <!-- Main Header / Navigation -->
-    <header id="main-header" class="w-full text-white sticky top-0 z-40 transition-all duration-300 border-b border-transparent">
-      <nav class="w-full px-4 md:px-8 py-4 transition-all duration-300">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <header id="main-header" class="w-full text-stone-800 sticky top-0 z-40 transition-all duration-300 bg-transparent py-4 px-4 md:px-8">
+      <nav id="nav-container" class="max-w-7xl mx-auto px-6 py-3 transition-all duration-300 rounded-full border border-transparent bg-transparent">
+        <div class="flex justify-between items-center">
           
           <!-- Brand Logo & Tagline -->
           <div onclick="scrollToSection('home')" class="flex items-center gap-3 cursor-pointer group">
-            <div class="relative w-12 h-12 rounded-full border border-gold-400 flex flex-col items-center justify-center bg-[#0a0a0a] group-hover:border-gold-300 transition-all duration-300 shadow-md">
-              <span class="font-display font-bold text-sm tracking-widest text-gold-400 group-hover:text-gold-300 transition-colors">SBJ</span>
+            <div class="relative w-12 h-12 rounded-full border border-gold-500/60 flex flex-col items-center justify-center bg-[#faf8f5] group-hover:border-gold-600 transition-all duration-300 shadow-sm">
+              <span class="font-display font-bold text-sm tracking-widest text-gold-600 group-hover:text-gold-700 transition-colors">SBJ</span>
               <div class="absolute -left-1.5 top-1/2 -translate-y-1/2 flex gap-0.5">
-                <span class="w-0.5 h-1.5 bg-gold-500 rounded-full"></span>
-                <span class="w-0.5 h-2.5 bg-gold-500 rounded-full"></span>
+                <span class="w-0.5 h-1.5 bg-gold-600 rounded-full"></span>
+                <span class="w-0.5 h-2.5 bg-gold-600 rounded-full"></span>
               </div>
               <div class="absolute -right-1.5 top-1/2 -translate-y-1/2 flex gap-0.5">
-                <span class="w-0.5 h-2.5 bg-gold-500 rounded-full"></span>
-                <span class="w-0.5 h-1.5 bg-gold-500 rounded-full"></span>
+                <span class="w-0.5 h-2.5 bg-gold-600 rounded-full"></span>
+                <span class="w-0.5 h-1.5 bg-gold-600 rounded-full"></span>
               </div>
             </div>
 
             <div>
-              <h1 class="font-display text-base md:text-lg font-bold tracking-widest text-gold-100 group-hover:text-gold-300 transition-colors leading-none">
+              <h1 class="font-display text-base md:text-lg font-bold tracking-widest text-stone-900 group-hover:text-gold-600 transition-colors leading-none">
                 SHRI BALAJI
               </h1>
-              <span class="font-display text-xs tracking-[0.25em] text-gold-400 group-hover:text-gold-300 transition-colors leading-none mt-1 block">
+              <span class="font-display text-xs tracking-[0.25em] text-gold-600 group-hover:text-gold-700 transition-colors leading-none mt-1 block">
                 JEWELLERS
               </span>
-              <p class="font-serif text-[8px] md:text-[9px] text-zinc-400 tracking-[0.2em] italic font-light mt-0.5">
+              <p class="font-serif text-[8px] md:text-[9px] text-stone-500 tracking-[0.2em] italic font-light mt-0.5">
                 Trust &bull; Purity &bull; Elegance
               </p>
             </div>
@@ -137,16 +138,16 @@
 
           <!-- Desktop Nav Links -->
           <div class="hidden lg:flex items-center gap-6">
-            <ul class="flex items-center gap-6 xl:gap-8 text-[11px] xl:text-xs font-semibold tracking-widest text-zinc-300">
-              <li><button onclick="scrollToSection('home')" class="hover:text-gold-400 transition-all duration-300 relative py-1 cursor-pointer">HOME</button></li>
-              <li><button onclick="scrollToSection('rates')" class="hover:text-gold-400 transition-all duration-300 relative py-1 cursor-pointer font-semibold text-gold-400">LIVE RATES</button></li>
-              <li><button onclick="scrollToSection('collections', 'gold')" class="hover:text-gold-400 transition-all duration-300 relative py-1 cursor-pointer">GOLD JEWELLERY</button></li>
-              <li><button onclick="scrollToSection('collections', 'silver')" class="hover:text-gold-400 transition-all duration-300 relative py-1 cursor-pointer">SILVER JEWELLERY</button></li>
-              <li><button onclick="scrollToSection('collections', 'bridal')" class="hover:text-gold-400 transition-all duration-300 relative py-1 cursor-pointer">BRIDAL COLLECTION</button></li>
-              <li><button onclick="scrollToSection('about')" class="hover:text-gold-400 transition-all duration-300 relative py-1 cursor-pointer">CONTACT US</button></li>
+            <ul class="flex items-center gap-6 xl:gap-8 text-[11px] xl:text-xs font-semibold tracking-widest text-stone-600">
+              <li><button onclick="scrollToSection('home')" class="hover:text-gold-600 transition-all duration-300 relative py-1 cursor-pointer uppercase">HOME</button></li>
+              <li><button onclick="scrollToSection('owner')" class="hover:text-gold-600 transition-all duration-300 relative py-1 cursor-pointer uppercase">OWNER &amp; SHOWROOM</button></li>
+              <li><button onclick="scrollToSection('collections', 'gold')" class="hover:text-gold-600 transition-all duration-300 relative py-1 cursor-pointer uppercase">GOLD JEWELLERY</button></li>
+              <li><button onclick="scrollToSection('collections', 'silver')" class="hover:text-gold-600 transition-all duration-300 relative py-1 cursor-pointer uppercase">SILVER JEWELLERY</button></li>
+              <li><button onclick="scrollToSection('collections', 'bridal')" class="hover:text-gold-600 transition-all duration-300 relative py-1 cursor-pointer uppercase">BRIDAL COLLECTION</button></li>
+              <li><button onclick="scrollToSection('about')" class="hover:text-gold-600 transition-all duration-300 relative py-1 cursor-pointer font-bold text-gold-600 uppercase">CONTACT US</button></li>
             </ul>
 
-            <a href="https://wa.me/916396330055?text=Hello%20Shri%20Balaji%20Jewellers!%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20exquisite%20jewellery%20collections." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 border border-gold-500 hover:bg-gold-500 hover:text-black transition-all duration-300 text-xs px-4 py-2 font-display tracking-widest font-semibold rounded-sm text-gold-300 hover:shadow-lg">
+            <a href="https://wa.me/916396330055?text=Hello%20Shri%20Balaji%20Jewellers!%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20exquisite%20jewellery%20collections." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 border border-gold-600 hover:bg-gold-600 hover:text-white transition-all duration-300 text-[10px] px-5 py-2.5 font-display tracking-widest font-bold rounded-full text-gold-700 hover:shadow-md uppercase bg-gold-50/40">
               <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
               <span>WhatsApp Us</span>
             </a>
@@ -154,10 +155,10 @@
 
           <!-- Hamburger Menu Trigger -->
           <div class="lg:hidden flex items-center gap-3">
-            <a href="https://wa.me/916396330055?text=Hello%20Shri%20Balaji%20Jewellers!%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20exquisite%20jewellery%20collections." target="_blank" rel="noopener noreferrer" class="p-1.5 text-gold-400 hover:text-gold-300 border border-gold-500/30 rounded-sm">
+            <a href="https://wa.me/916396330055?text=Hello%20Shri%20Balaji%20Jewellers!%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20exquisite%20jewellery%20collections." target="_blank" rel="noopener noreferrer" class="p-1.5 text-gold-600 hover:text-gold-700 border border-gold-500/30 rounded-full bg-white/50">
               <i data-lucide="message-circle" class="w-4.5 h-4.5"></i>
             </a>
-            <button onclick="toggleMobileMenu(true)" class="text-gold-400 hover:text-gold-300 p-1">
+            <button onclick="toggleMobileMenu(true)" class="text-stone-800 hover:text-gold-600 p-1">
               <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
           </div>
@@ -165,49 +166,49 @@
       </nav>
 
       <!-- Mobile Menu Side Drawer -->
-      <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-72 bg-[#09090a] border-l border-zinc-900 z-50 shadow-2xl p-6 transition-transform duration-300 transform translate-x-full lg:hidden">
-        <div class="flex justify-between items-center mb-8 pb-4 border-b border-zinc-900">
+      <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-72 bg-[#faf8f5] border-l border-stone-200 z-50 shadow-2xl p-6 transition-transform duration-300 transform translate-x-full lg:hidden">
+        <div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200">
           <div class="flex items-center gap-2">
-            <span class="font-display font-bold text-sm tracking-widest text-gold-400">SBJ</span>
-            <div class="h-4 w-[1px] bg-zinc-800"></div>
-            <span class="font-display font-semibold text-[10px] tracking-widest text-zinc-400">MENU</span>
+            <span class="font-display font-bold text-sm tracking-widest text-gold-600">SBJ</span>
+            <div class="h-4 w-[1px] bg-stone-300"></div>
+            <span class="font-display font-semibold text-[10px] tracking-widest text-stone-500">MENU</span>
           </div>
-          <button onclick="toggleMobileMenu(false)" class="text-zinc-400 hover:text-gold-400">
+          <button onclick="toggleMobileMenu(false)" class="text-stone-500 hover:text-gold-600">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
 
-        <ul class="flex flex-col gap-5 text-sm tracking-widest font-semibold text-zinc-300 mb-8">
-          <li><button onclick="scrollToSection('home')" class="w-full text-left py-1 hover:text-gold-400 transition-colors">HOME</button></li>
-          <li><button onclick="scrollToSection('rates')" class="w-full text-left py-1 hover:text-gold-400 transition-colors font-semibold text-gold-400">LIVE RATES &amp; CALCULATOR</button></li>
-          <li><button onclick="scrollToSection('collections', 'gold')" class="w-full text-left py-1 hover:text-gold-400 transition-colors">GOLD JEWELLERY</button></li>
-          <li><button onclick="scrollToSection('collections', 'silver')" class="w-full text-left py-1 hover:text-gold-400 transition-colors">SILVER JEWELLERY</button></li>
-          <li><button onclick="scrollToSection('collections', 'bridal')" class="w-full text-left py-1 hover:text-gold-400 transition-colors">BRIDAL COLLECTION</button></li>
-          <li><button onclick="scrollToSection('about')" class="w-full text-left py-1 hover:text-gold-400 transition-colors">ABOUT US</button></li>
-          <li><button onclick="scrollToSection('about')" class="w-full text-left py-1 hover:text-gold-400 transition-colors">CONTACT US</button></li>
+        <ul class="flex flex-col gap-5 text-xs tracking-widest font-semibold text-stone-700 mb-8">
+          <li><button onclick="scrollToSection('home')" class="w-full text-left py-1 hover:text-gold-600 transition-colors">HOME</button></li>
+          <li><button onclick="scrollToSection('owner')" class="w-full text-left py-1 hover:text-gold-600 transition-colors">OWNER &amp; SHOWROOM</button></li>
+          <li><button onclick="scrollToSection('collections', 'gold')" class="w-full text-left py-1 hover:text-gold-600 transition-colors">GOLD JEWELLERY</button></li>
+          <li><button onclick="scrollToSection('collections', 'silver')" class="w-full text-left py-1 hover:text-gold-600 transition-colors">SILVER JEWELLERY</button></li>
+          <li><button onclick="scrollToSection('collections', 'bridal')" class="w-full text-left py-1 hover:text-gold-600 transition-colors">BRIDAL COLLECTION</button></li>
+          <li><button onclick="scrollToSection('about')" class="w-full text-left py-1 hover:text-gold-600 transition-colors">ABOUT US</button></li>
+          <li><button onclick="scrollToSection('about')" class="w-full text-left py-1 hover:text-gold-600 transition-colors">CONTACT US</button></li>
         </ul>
 
-        <div class="pt-6 border-t border-zinc-900 flex flex-col gap-4">
-          <a href="https://wa.me/916396330055?text=Hello%20Shri%20Balaji%20Jewellers!%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20exquisite%20jewellery%20collections." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-gold-500 text-black text-xs font-semibold py-3 px-4 font-display tracking-widest rounded-sm hover:bg-gold-400 transition-colors">
+        <div class="pt-6 border-t border-stone-200 flex flex-col gap-4">
+          <a href="https://wa.me/916396330055?text=Hello%20Shri%20Balaji%20Jewellers!%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20exquisite%20jewellery%20collections." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-gold-600 text-white text-xs font-bold py-3.5 px-4 font-display tracking-widest rounded-sm hover:bg-gold-700 transition-colors shadow-sm">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
             <span>WHATSAPP US</span>
           </a>
 
-          <div class="text-[11px] text-zinc-500 font-light flex flex-col gap-2 mt-4">
+          <div class="text-[11px] text-stone-500 font-light flex flex-col gap-2 mt-4 font-sans">
             <div class="flex items-start gap-2">
-              <i data-lucide="map-pin" class="text-gold-500 w-3 h-3 shrink-0 mt-0.5"></i>
-              <span>Pillar Number - 45, Behind the Rajputana Regiment College Village Khera Road, Pilkhuwa (Hapur), 245304.</span>
+              <i data-lucide="map-pin" class="text-gold-600 w-3 h-3 shrink-0 mt-0.5"></i>
+              <span>Pillar Number - 45, Behind the Rajputana Regiment College, Pilkhuwa (Hapur), 245304</span>
             </div>
             <div class="flex items-center gap-2">
-              <i data-lucide="phone" class="text-gold-500 w-3 h-3 shrink-0"></i>
-              <a href="tel:+916396330055" class="hover:underline">+91 63963 30055</a>
+              <i data-lucide="phone" class="text-gold-600 w-3 h-3 shrink-0"></i>
+              <a href="tel:+916396330055" class="hover:underline font-semibold">+91 63963 30055</a>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Drawer Overlay -->
-      <div id="drawer-overlay" onclick="toggleMobileMenu(false)" class="fixed inset-0 bg-black/60 z-30 hidden lg:hidden backdrop-blur-xs"></div>
+      <div id="drawer-overlay" onclick="toggleMobileMenu(false)" class="fixed inset-0 bg-stone-900/40 z-30 hidden lg:hidden backdrop-blur-xs"></div>
     </header>
 
     <!-- Hero Slider Banner Carousel -->
@@ -228,42 +229,46 @@
 
       <!-- Hero Content -->
       <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full text-center flex flex-col items-center">
-        <div class="flex flex-col items-center max-w-3xl">
+        <div class="flex flex-col items-center max-w-3xl bg-black/50 backdrop-blur-lg border border-gold-500/20 px-8 py-14 sm:px-16 sm:py-16 rounded-t-[200px] rounded-b-[40px] shadow-2xl relative">
+          
+          <!-- Delicate Gold Arch Accent Line -->
+          <div class="absolute inset-2 rounded-t-[190px] rounded-b-[32px] border border-gold-400/10 pointer-events-none"></div>
+
           <!-- Top Tag -->
-          <div class="flex items-center gap-2 mb-4 text-gold-400">
-            <span class="h-[1px] w-8 bg-gold-500/50"></span>
+          <div class="flex items-center justify-center gap-2 mb-4 text-gold-400 relative z-10">
+            <span class="h-[1px] w-8 bg-gold-500/40"></span>
             <i data-lucide="sparkles" class="w-3.5 h-3.5 animate-pulse"></i>
             <span class="font-display text-[10px] tracking-[0.3em] uppercase">SHRI BALAJI JEWELLERS</span>
             <i data-lucide="sparkles" class="w-3.5 h-3.5 animate-pulse"></i>
-            <span class="h-[1px] w-8 bg-gold-500/50"></span>
+            <span class="h-[1px] w-8 bg-gold-500/40"></span>
           </div>
 
           <!-- Headings with text containers to populate dynamically -->
-          <h2 id="hero-title" class="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-wider text-gold-100 leading-tight">
+          <h2 id="hero-title" class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-widest text-gold-100 leading-tight transition-all duration-500 relative z-10">
             TIMELESS BEAUTY.
           </h2>
-          <h3 id="hero-subtitle" class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wider text-gold-400 mt-2 leading-tight">
+          <h3 id="hero-subtitle" class="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-widest text-gold-400 mt-2 leading-tight transition-all duration-500 relative z-10">
             PURE TRUST.
           </h3>
 
           <!-- Gold Ornament Divider -->
-          <div class="my-6 flex items-center justify-center gap-3 text-gold-400/80">
-            <span class="h-[1px] w-12 sm:w-20 bg-gradient-to-r from-transparent to-gold-500"></span>
+          <div class="my-5 flex items-center justify-center gap-3 text-gold-400/80 relative z-10">
+            <span class="h-[1px] w-12 sm:w-20 bg-gradient-to-r from-transparent to-gold-400"></span>
             <span class="text-xs tracking-widest">&#11037;&#11037;&#11037;</span>
-            <span class="h-[1px] w-12 sm:w-20 bg-gradient-to-l from-transparent to-gold-500"></span>
+            <span class="h-[1px] w-12 sm:w-20 bg-gradient-to-l from-transparent to-gold-400"></span>
           </div>
 
           <!-- Description -->
-          <p id="hero-text" class="font-serif text-base sm:text-lg md:text-xl text-zinc-300 tracking-wide font-light max-w-2xl text-center leading-relaxed italic">
+          <p id="hero-text" class="font-serif text-sm sm:text-base md:text-lg text-stone-200 tracking-wide font-light max-w-2xl text-center leading-relaxed italic transition-all duration-500 relative z-10">
             Discover exquisite gold & silver jewellery crafted with perfection, purity, and standard heritage craftsmanship.
           </p>
 
           <!-- Action Buttons -->
-          <div class="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
-            <button onclick="scrollToSection('collections')" class="w-full sm:w-auto bg-gold-500 hover:bg-gold-400 text-black font-display text-xs font-bold tracking-[0.2em] px-8 py-4 rounded-sm transition-all duration-300 transform hover:scale-[1.02] shadow-xl">
+          <div class="mt-8 flex flex-col sm:flex-row items-center gap-4 w-full justify-center z-10">
+            <button onclick="scrollToSection('collections')" class="w-full sm:w-auto bg-gold-500 hover:bg-gold-400 text-black font-display text-[10px] font-bold tracking-[0.25em] px-8 py-3.5 rounded-full transition-all duration-300 transform hover:scale-[1.02] shadow-xl cursor-pointer">
               EXPLORE COLLECTION
             </button>
-            <button onclick="scrollToSection('about')" class="w-full sm:w-auto border border-gold-500 text-gold-300 hover:bg-gold-500/10 font-display text-xs font-bold tracking-[0.2em] px-8 py-4 rounded-sm transition-all duration-300 flex items-center justify-center gap-2">
+            <button onclick="scrollToSection('about')" class="w-full sm:w-auto border border-gold-500/60 text-gold-200 hover:bg-gold-500/10 font-display text-[10px] font-bold tracking-[0.25em] px-8 py-3.5 rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-black/20">
               <i data-lucide="map-pin" class="text-gold-400 w-3.5 h-3.5"></i>
               <span>VISIT OUR STORE</span>
             </button>
@@ -287,237 +292,52 @@
       </div>
     </section>
 
-    <!-- Today's Live Gold & Silver Rates & Calculator Section -->
-    <section id="rates" class="py-20 bg-[#08080a] border-y border-zinc-900 relative">
-      <div class="absolute top-0 right-0 w-64 h-64 bg-gold-950/5 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute bottom-0 left-0 w-64 h-64 bg-gold-900/5 rounded-full blur-3xl pointer-events-none"></div>
-      
-      <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
-        <!-- Header -->
-        <div class="text-center mb-16">
-          <div class="flex items-center justify-center gap-2 text-gold-400 mb-2">
-            <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
-            <span class="font-display text-[10px] tracking-[0.3em] uppercase">TRANSPARENT VALUE</span>
-            <i data-lucide="sparkles" class="w-3.5 h-3.5 animate-pulse"></i>
-          </div>
-          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-wider text-gold-100 uppercase">
-            LIVE METAL RATES &amp; ESTIMATOR
-          </h2>
-          <div class="my-4 flex items-center justify-center gap-3 text-gold-400/60">
-            <span class="h-[1px] w-12 bg-gradient-to-r from-transparent to-gold-500"></span>
-            <span class="text-[10px]">&#11037; &#10043; &#11037;</span>
-            <span class="h-[1px] w-12 bg-gradient-to-l from-transparent to-gold-500"></span>
-          </div>
-          <p class="font-serif text-sm md:text-base text-zinc-400 italic max-w-xl mx-auto">
-            View live updated market rates for pure gold &amp; sterling silver, and calculate instant, transparent cost estimates for your desired weights.
-          </p>
-        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          
-          <!-- Left 7 columns: Live Rates display cards -->
-          <div class="lg:col-span-7 bg-[#0b0b0d] border border-zinc-900/80 p-6 md:p-8 rounded-sm flex flex-col justify-between shadow-2xl relative">
-            <div>
-              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
-                  <h3 class="font-display text-xs font-semibold tracking-[0.2em] text-gold-300 uppercase">
-                    TODAY'S STORE RATES
-                  </h3>
-                </div>
-                <div class="flex flex-wrap items-center gap-2.5">
-                  <select id="rate-city-select" onchange="fetchLiveRates()" class="bg-zinc-950 text-[10px] text-zinc-400 border border-zinc-800 rounded-xs py-1 px-2.5 focus:outline-none focus:border-gold-500 font-mono font-medium cursor-pointer shadow-sm">
-                    <option value="Delhi" selected>Delhi (NCR)</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Bangalore">Bangalore</option>
-                    <option value="Chennai">Chennai</option>
-                    <option value="Kolkata">Kolkata</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                    <option value="Pune">Pune</option>
-                    <option value="Kerala">Kerala</option>
-                  </select>
-                  <span id="rate-status" class="text-[10px] font-mono text-zinc-500">Fetching live rates...</span>
-                  <button id="refresh-rates-trigger" onclick="fetchLiveRates()" class="p-1.5 border border-zinc-800 hover:border-gold-400 rounded-sm bg-black hover:text-gold-300 transition-all duration-300 focus:outline-none cursor-pointer" title="Refresh Live Rates">
-                    <i id="refresh-rates-btn" data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Rates Grid -->
-              <div class="space-y-4">
-                <!-- 24K Gold -->
-                <div class="p-4 bg-zinc-950/60 rounded-xs border border-zinc-900/50 hover:border-gold-500/20 transition-all duration-300 flex justify-between items-center group">
-                  <div>
-                    <span class="font-display text-xs font-semibold text-zinc-100 tracking-wide block">24K Pure Gold (99.9% Purity)</span>
-                    <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold mt-1 inline-block bg-gold-950/20 border border-gold-500/20 px-1.5 py-0.5 rounded-sm">999 Purity</span>
-                  </div>
-                  <div class="text-right">
-                    <span id="rate-gold24k-1g" class="font-serif text-lg font-bold text-gold-400 block">₹7,350 <span class="text-[9px] font-sans font-light text-zinc-500">/ 1g</span></span>
-                    <span id="rate-gold24k-10g" class="font-mono text-[10px] text-zinc-400 mt-1 block">₹73,500 <span class="text-[8px] font-sans text-zinc-500">/ 10g</span></span>
-                  </div>
-                </div>
-
-                <!-- 22K Gold -->
-                <div class="p-4 bg-zinc-950/60 rounded-xs border border-zinc-900/50 hover:border-gold-500/20 transition-all duration-300 flex justify-between items-center group">
-                  <div>
-                    <span class="font-display text-xs font-semibold text-zinc-100 tracking-wide block">22K Standard Gold (91.6% Purity)</span>
-                    <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold mt-1 inline-block bg-emerald-950/20 border border-emerald-500/20 px-1.5 py-0.5 rounded-sm">BIS Hallmarked 916</span>
-                  </div>
-                  <div class="text-right">
-                    <span id="rate-gold22k-1g" class="font-serif text-lg font-bold text-gold-400 block">₹6,737 <span class="text-[9px] font-sans font-light text-zinc-500">/ 1g</span></span>
-                    <span id="rate-gold22k-10g" class="font-mono text-[10px] text-zinc-400 mt-1 block">₹67,370 <span class="text-[8px] font-sans text-zinc-500">/ 10g</span></span>
-                  </div>
-                </div>
-
-                <!-- 18K Gold -->
-                <div class="p-4 bg-zinc-950/60 rounded-xs border border-zinc-900/50 hover:border-gold-500/20 transition-all duration-300 flex justify-between items-center group">
-                  <div>
-                    <span class="font-display text-xs font-semibold text-zinc-100 tracking-wide block">18K Standard Gold (75% Purity)</span>
-                    <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold mt-1 inline-block bg-zinc-900 border border-zinc-800 px-1.5 py-0.5 rounded-sm">750 Gold</span>
-                  </div>
-                  <div class="text-right">
-                    <span id="rate-gold18k-1g" class="font-serif text-lg font-bold text-gold-400 block">₹5,512 <span class="text-[9px] font-sans font-light text-zinc-500">/ 1g</span></span>
-                    <span id="rate-gold18k-10g" class="font-mono text-[10px] text-zinc-400 mt-1 block">₹55,120 <span class="text-[8px] font-sans text-zinc-500">/ 10g</span></span>
-                  </div>
-                </div>
-
-                <!-- 99.9% Fine Silver -->
-                <div class="p-4 bg-zinc-950/60 rounded-xs border border-zinc-900/50 hover:border-gold-500/20 transition-all duration-300 flex justify-between items-center group">
-                  <div>
-                    <span class="font-display text-xs font-semibold text-zinc-100 tracking-wide block">99.9% Fine Sterling Silver</span>
-                    <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold mt-1 inline-block bg-zinc-900 border border-zinc-800 px-1.5 py-0.5 rounded-sm">Sterling Silver</span>
-                  </div>
-                  <div class="text-right">
-                    <span id="rate-silver-1g" class="font-serif text-lg font-bold text-zinc-300 block">₹89 <span class="text-[9px] font-sans font-light text-zinc-500">/ 1g</span></span>
-                    <span id="rate-silver-100g" class="font-mono text-[10px] text-zinc-400 mt-1 block">₹8,900 <span class="text-[8px] font-sans text-zinc-500">/ 100g</span></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Transparency Disclaimer -->
-            <div class="mt-8 pt-4 border-t border-zinc-900 text-[11px] text-zinc-500 font-light flex items-start gap-2.5 leading-relaxed">
-              <i data-lucide="info" class="text-gold-500/70 w-4 h-4 shrink-0 mt-0.5"></i>
-              <span>Rates displayed are indicative global rates calculated per gram. Local making charges, GST (3%), and custom artisan charges are added during invoicing. Call or visit our Pilkhuwa showroom for final quotes.</span>
-            </div>
-          </div>
-          
-          <!-- Right 5 columns: Estimation Calculator card -->
-          <div class="lg:col-span-5 bg-[#0b0b0d] border border-zinc-900/80 p-6 md:p-8 rounded-sm flex flex-col justify-between shadow-2xl">
-            <div>
-              <h3 class="font-display text-xs font-semibold tracking-[0.2em] text-gold-300 uppercase mb-6 flex items-center gap-2">
-                <i data-lucide="calculator" class="w-4 h-4 text-gold-400 font-semibold"></i>
-                <span>ESTIMATE PRICE INSTANTLY</span>
-              </h3>
-
-              <!-- Calculator Controls -->
-              <div class="space-y-4">
-                <div>
-                  <label class="block text-[10px] font-display text-zinc-500 tracking-widest uppercase mb-1.5 font-bold">Select Metal / Purity</label>
-                  <select id="calc-metal" onchange="calculateEstimate()" class="w-full bg-black text-xs text-zinc-300 border border-zinc-900 rounded-sm py-3 px-3.5 focus:outline-none focus:border-gold-500 font-medium cursor-pointer">
-                    <option value="gold22k">Gold - 22K (Hallmarked 916)</option>
-                    <option value="gold24k">Gold - 24K (Pure 99.9%)</option>
-                    <option value="gold18k">Gold - 18K (Standard 750)</option>
-                    <option value="silver">Sterling Silver - 99.9%</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label class="block text-[10px] font-display text-zinc-500 tracking-widest uppercase mb-1.5 font-bold">Ornament Weight (Grams)</label>
-                  <div class="relative">
-                    <input id="calc-weight" type="number" value="10" min="0.1" step="0.1" oninput="calculateEstimate()" class="w-full bg-black text-xs text-zinc-200 border border-zinc-900 rounded-sm py-3 pl-3.5 pr-12 focus:outline-none focus:border-gold-500 font-medium font-mono">
-                    <span class="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] text-zinc-500 font-semibold uppercase tracking-wider font-mono select-none">grams</span>
-                  </div>
-                </div>
-
-                <div>
-                  <div class="flex justify-between items-center mb-1.5">
-                    <label class="block text-[10px] font-display text-zinc-500 tracking-widest uppercase font-bold">Est. Making Charges</label>
-                    <span id="calc-making-display" class="text-[10px] font-mono text-gold-400 font-bold">8%</span>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <input id="calc-making" type="range" min="3" max="25" value="8" oninput="document.getElementById('calc-making-display').textContent=this.value+'%'; calculateEstimate()" class="w-full accent-gold-500 cursor-pointer h-1 bg-zinc-900 rounded-lg appearance-none">
-                  </div>
-                </div>
-              </div>
-
-              <!-- Cost breakdown calculation receipt -->
-              <div class="mt-6 p-4 bg-zinc-950/80 rounded-xs border border-zinc-900 space-y-3 font-mono text-xs text-zinc-400">
-                <div class="flex justify-between">
-                  <span class="text-zinc-500 font-sans text-[11px] uppercase tracking-wide">Metal Cost:</span>
-                  <span id="calc-metal-cost" class="font-semibold text-zinc-200">₹67,370</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-zinc-500 font-sans text-[11px] uppercase tracking-wide">Making Charges:</span>
-                  <span id="calc-making-cost" class="font-semibold text-zinc-200">₹5,390</span>
-                </div>
-                <div class="flex justify-between pb-3 border-b border-zinc-900">
-                  <span class="text-zinc-500 font-sans text-[11px] uppercase tracking-wide">GST (3.0%):</span>
-                  <span id="calc-gst-cost" class="font-semibold text-zinc-200">₹2,183</span>
-                </div>
-                <div class="flex justify-between pt-1 items-center">
-                  <span class="text-gold-400 font-display font-bold text-xs uppercase tracking-widest">TOTAL ESTIMATE:</span>
-                  <span id="calc-total-cost" class="font-serif text-lg font-bold text-gold-400">₹74,943</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- WhatsApp Order Inquiry -->
-            <button onclick="sendCalculatorWhatsApp()" class="w-full bg-gold-500 hover:bg-gold-400 text-black font-display text-xs font-bold tracking-[0.2em] py-3.5 px-4 rounded-sm flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-[1.01] shadow-lg cursor-pointer mt-6">
-              <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-              <span>ENQUIRE WITH THIS ESTIMATE</span>
-            </button>
-          </div>
-
-        </div>
-      </div>
-    </section>
 
     <!-- Main Collections Segment -->
-    <section id="collections" class="py-24 bg-black relative">
-      <div class="absolute top-0 left-0 w-64 h-64 bg-gold-950/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute bottom-0 right-0 w-80 h-80 bg-gold-900/10 rounded-full blur-3xl pointer-events-none"></div>
+    <section id="collections" class="py-24 bg-[#faf8f5] relative">
+      <div class="absolute top-0 left-0 w-64 h-64 bg-gold-200/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 right-0 w-80 h-80 bg-gold-200/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         <!-- Header -->
         <div class="text-center mb-16">
-          <div class="flex items-center justify-center gap-2 text-gold-400 mb-2">
+          <div class="flex items-center justify-center gap-2 text-gold-600 mb-2">
             <i data-lucide="sparkles" class="w-3.5 h-3.5 animate-pulse"></i>
             <span class="font-display text-[10px] tracking-[0.3em] uppercase">EXPERIENCE LUXURY</span>
             <i data-lucide="sparkles" class="w-3.5 h-3.5 animate-pulse"></i>
           </div>
-          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-wider text-gold-100 uppercase">
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-wider text-stone-900 uppercase">
             OUR COLLECTIONS
           </h2>
-          <div class="my-4 flex items-center justify-center gap-3 text-gold-400/60">
-            <span class="h-[1px] w-12 bg-gradient-to-r from-transparent to-gold-500"></span>
+          <div class="my-4 flex items-center justify-center gap-3 text-gold-500/60">
+            <span class="h-[1px] w-12 bg-gradient-to-r from-transparent to-gold-600"></span>
             <span class="text-[10px]">&#11037; &#10043; &#11037;</span>
-            <span class="h-[1px] w-12 bg-gradient-to-l from-transparent to-gold-500"></span>
+            <span class="h-[1px] w-12 bg-gradient-to-l from-transparent to-gold-600"></span>
           </div>
-          <p class="font-serif text-sm md:text-base text-zinc-400 italic max-w-xl mx-auto">
+          <p class="font-serif text-sm md:text-base text-stone-600 italic max-w-xl mx-auto leading-relaxed">
             Indulge in our exquisite assortment of handcrafted jewellery pieces, meticulously forged by generational artisans.
           </p>
         </div>
 
         <!-- flagship grid matching user template image -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           
           <!-- Gold -->
-          <div class="bg-[#08080a] border border-zinc-900/80 hover:border-gold-500/40 p-4 rounded-sm flex flex-col group transition-all duration-300 shadow-xl">
-            <div class="relative aspect-[4/3] overflow-hidden bg-zinc-950 rounded-xs mb-5">
-              <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&q=80&w=800" alt="Gold Jewellery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+          <div class="bg-white border border-[#e7e2d6]/80 hover:border-gold-500/60 p-5 rounded-t-[140px] rounded-b-[36px] flex flex-col group transition-all duration-300 shadow-md hover:shadow-xl bg-radial-gradient from-white to-[#fdfcfb]">
+            <div class="relative aspect-[4/5] overflow-hidden bg-stone-100 rounded-t-[120px] rounded-b-2xl mb-6 shadow-xs">
+              <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&q=80&w=800" alt="Gold Jewellery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerpolicy="no-referrer">
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/45 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
             </div>
-            <div class="flex flex-col flex-grow text-center items-center">
-              <h3 class="font-display text-sm font-semibold tracking-widest text-gold-300 group-hover:text-gold-200 transition-colors uppercase mb-1">
+            <div class="flex flex-col flex-grow text-center items-center px-2">
+              <h3 class="font-display text-xs font-bold tracking-widest text-stone-900 group-hover:text-gold-600 transition-colors uppercase mb-1">
                 GOLD JEWELLERY
               </h3>
-              <p class="font-serif text-xs text-zinc-400 italic font-light mb-6">
+              <p class="font-serif text-xs text-stone-500 italic font-light mb-6">
                 Timeless designs in pure gold.
               </p>
-              <button onclick="setCollectionFilter('gold')" class="mt-auto border-b border-gold-500/40 hover:border-gold-300 text-[10px] font-display tracking-[0.25em] font-semibold text-gold-400 hover:text-gold-200 py-1.5 flex items-center gap-1.5 transition-all duration-200 cursor-pointer">
+              <button onclick="setCollectionFilter('gold')" class="mt-auto border-b border-gold-500/40 hover:border-gold-600 text-[10px] font-display tracking-[0.25em] font-semibold text-gold-600 hover:text-gold-700 py-1.5 flex items-center gap-1.5 transition-all duration-200 cursor-pointer">
                 <span>EXPLORE NOW</span>
                 <i data-lucide="chevron-right" class="w-3 h-3"></i>
               </button>
@@ -525,19 +345,19 @@
           </div>
 
           <!-- Silver -->
-          <div class="bg-[#08080a] border border-zinc-900/80 hover:border-gold-500/40 p-4 rounded-sm flex flex-col group transition-all duration-300 shadow-xl">
-            <div class="relative aspect-[4/3] overflow-hidden bg-zinc-950 rounded-xs mb-5">
-              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=800" alt="Silver Jewellery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+          <div class="bg-white border border-[#e7e2d6]/80 hover:border-gold-500/60 p-5 rounded-t-[140px] rounded-b-[36px] flex flex-col group transition-all duration-300 shadow-md hover:shadow-xl bg-radial-gradient from-white to-[#fdfcfb]">
+            <div class="relative aspect-[4/5] overflow-hidden bg-stone-100 rounded-t-[120px] rounded-b-2xl mb-6 shadow-xs">
+              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=800" alt="Silver Jewellery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerpolicy="no-referrer">
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/45 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
             </div>
-            <div class="flex flex-col flex-grow text-center items-center">
-              <h3 class="font-display text-sm font-semibold tracking-widest text-gold-300 group-hover:text-gold-200 transition-colors uppercase mb-1">
+            <div class="flex flex-col flex-grow text-center items-center px-2">
+              <h3 class="font-display text-xs font-bold tracking-widest text-stone-900 group-hover:text-gold-600 transition-colors uppercase mb-1">
                 SILVER JEWELLERY
               </h3>
-              <p class="font-serif text-xs text-zinc-400 italic font-light mb-6">
+              <p class="font-serif text-xs text-stone-500 italic font-light mb-6">
                 Elegant silver designs for every occasion.
               </p>
-              <button onclick="setCollectionFilter('silver')" class="mt-auto border-b border-gold-500/40 hover:border-gold-300 text-[10px] font-display tracking-[0.25em] font-semibold text-gold-400 hover:text-gold-200 py-1.5 flex items-center gap-1.5 transition-all duration-200 cursor-pointer">
+              <button onclick="setCollectionFilter('silver')" class="mt-auto border-b border-gold-500/40 hover:border-gold-600 text-[10px] font-display tracking-[0.25em] font-semibold text-gold-600 hover:text-gold-700 py-1.5 flex items-center gap-1.5 transition-all duration-200 cursor-pointer">
                 <span>EXPLORE NOW</span>
                 <i data-lucide="chevron-right" class="w-3 h-3"></i>
               </button>
@@ -545,19 +365,19 @@
           </div>
 
           <!-- Bridal -->
-          <div class="bg-[#08080a] border border-zinc-900/80 hover:border-gold-500/40 p-4 rounded-sm flex flex-col group transition-all duration-300 shadow-xl">
-            <div class="relative aspect-[4/3] overflow-hidden bg-zinc-950 rounded-xs mb-5">
-              <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=800" alt="Bridal Collection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+          <div class="bg-white border border-[#e7e2d6]/80 hover:border-gold-500/60 p-5 rounded-t-[140px] rounded-b-[36px] flex flex-col group transition-all duration-300 shadow-md hover:shadow-xl bg-radial-gradient from-white to-[#fdfcfb]">
+            <div class="relative aspect-[4/5] overflow-hidden bg-stone-100 rounded-t-[120px] rounded-b-2xl mb-6 shadow-xs">
+              <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=800" alt="Bridal Collection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerpolicy="no-referrer">
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/45 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
             </div>
-            <div class="flex flex-col flex-grow text-center items-center">
-              <h3 class="font-display text-sm font-semibold tracking-widest text-gold-300 group-hover:text-gold-200 transition-colors uppercase mb-1">
+            <div class="flex flex-col flex-grow text-center items-center px-2">
+              <h3 class="font-display text-xs font-bold tracking-widest text-stone-900 group-hover:text-gold-600 transition-colors uppercase mb-1">
                 BRIDAL COLLECTION
               </h3>
-              <p class="font-serif text-xs text-zinc-400 italic font-light mb-6">
+              <p class="font-serif text-xs text-stone-500 italic font-light mb-6">
                 For your most special wedding moments.
               </p>
-              <button onclick="setCollectionFilter('bridal')" class="mt-auto border-b border-gold-500/40 hover:border-gold-300 text-[10px] font-display tracking-[0.25em] font-semibold text-gold-400 hover:text-gold-200 py-1.5 flex items-center gap-1.5 transition-all duration-200 cursor-pointer">
+              <button onclick="setCollectionFilter('bridal')" class="mt-auto border-b border-gold-500/40 hover:border-gold-600 text-[10px] font-display tracking-[0.25em] font-semibold text-gold-600 hover:text-gold-700 py-1.5 flex items-center gap-1.5 transition-all duration-200 cursor-pointer">
                 <span>EXPLORE NOW</span>
                 <i data-lucide="chevron-right" class="w-3 h-3"></i>
               </button>
@@ -567,20 +387,20 @@
         </div>
 
         <!-- Interactive Filtering Header -->
-        <div id="catalogue-view" class="border-t border-zinc-900 pt-16 mb-10 flex flex-col sm:flex-row justify-between items-center gap-6">
+        <div id="catalogue-view" class="border-t border-stone-200 pt-16 mb-10 flex flex-col sm:flex-row justify-between items-center gap-6">
           <div class="flex items-center gap-2">
-            <i data-lucide="filter" class="text-gold-400 w-4 h-4"></i>
-            <h3 class="font-display text-xs font-semibold tracking-[0.2em] text-zinc-300 uppercase">
+            <i data-lucide="filter" class="text-gold-600 w-4 h-4"></i>
+            <h3 class="font-display text-[10px] font-bold tracking-[0.25em] text-stone-800 uppercase">
               INTERACTIVE DIGITAL CATALOGUE
             </h3>
           </div>
 
           <!-- Filter buttons -->
           <div class="flex flex-wrap gap-2 justify-center">
-            <button id="filter-btn-all" onclick="setCollectionFilter('all')" class="px-4 py-2 text-[10px] tracking-widest font-display font-semibold transition-all duration-300 rounded-xs border uppercase bg-gold-500 border-gold-500 text-black shadow-lg">All Items</button>
-            <button id="filter-btn-gold" onclick="setCollectionFilter('gold')" class="px-4 py-2 text-[10px] tracking-widest font-display font-semibold transition-all duration-300 rounded-xs border uppercase bg-transparent border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-200">Gold Jewellery</button>
-            <button id="filter-btn-silver" onclick="setCollectionFilter('silver')" class="px-4 py-2 text-[10px] tracking-widest font-display font-semibold transition-all duration-300 rounded-xs border uppercase bg-transparent border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-200">Silver Jewellery</button>
-            <button id="filter-btn-bridal" onclick="setCollectionFilter('bridal')" class="px-4 py-2 text-[10px] tracking-widest font-display font-semibold transition-all duration-300 rounded-xs border uppercase bg-transparent border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-200">Bridal Jewellery</button>
+            <button id="filter-btn-all" onclick="setCollectionFilter('all')" class="px-5 py-2.5 text-[9px] tracking-widest font-display font-bold transition-all duration-300 rounded-full border uppercase bg-stone-900 border-stone-900 text-white shadow-sm cursor-pointer">All Items</button>
+            <button id="filter-btn-gold" onclick="setCollectionFilter('gold')" class="px-5 py-2.5 text-[9px] tracking-widest font-display font-bold transition-all duration-300 rounded-full border uppercase bg-transparent border-stone-200 text-stone-600 hover:border-stone-400 hover:text-stone-900 cursor-pointer">Gold Jewellery</button>
+            <button id="filter-btn-silver" onclick="setCollectionFilter('silver')" class="px-5 py-2.5 text-[9px] tracking-widest font-display font-bold transition-all duration-300 rounded-full border uppercase bg-transparent border-stone-200 text-stone-600 hover:border-stone-400 hover:text-stone-900 cursor-pointer">Silver Jewellery</button>
+            <button id="filter-btn-bridal" onclick="setCollectionFilter('bridal')" class="px-5 py-2.5 text-[9px] tracking-widest font-display font-bold transition-all duration-300 rounded-full border uppercase bg-transparent border-stone-200 text-stone-600 hover:border-stone-400 hover:text-stone-900 cursor-pointer">Bridal Jewellery</button>
           </div>
         </div>
 
@@ -592,72 +412,183 @@
       </div>
     </section>
 
+    <!-- Meet Our Owner & Showroom Section -->
+    <section id="owner" class="py-24 bg-[#f3efe9] border-t border-stone-200 relative">
+      <div class="absolute top-0 left-0 w-80 h-80 bg-gold-200/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 right-0 w-80 h-80 bg-gold-200/5 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-2 text-gold-600 mb-2">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            <span class="font-display text-[10px] tracking-[0.3em] uppercase">LEGACY &amp; PRESENCE</span>
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 animate-pulse"></i>
+          </div>
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-wider text-stone-900 uppercase">
+            OWNER &amp; SHOWROOM
+          </h2>
+          <div class="my-4 flex items-center justify-center gap-3 text-gold-500/60">
+            <span class="h-[1px] w-12 bg-gradient-to-r from-transparent to-gold-600"></span>
+            <span class="text-[10px]">&#11037; &#10043; &#11037;</span>
+            <span class="h-[1px] w-12 bg-gradient-to-l from-transparent to-gold-600"></span>
+          </div>
+          <p class="font-serif text-sm md:text-base text-stone-600 italic max-w-xl mx-auto leading-relaxed">
+            Meet the driving force behind our commitment to purity and step inside our premium jewelry boutique showroom in Pilkhuwa.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+          
+          <!-- Card 1: Owner -->
+          <div class="bg-white border border-[#e7e2d6] p-7 md:p-8 rounded-[32px] flex flex-col md:flex-row gap-6 items-center shadow-lg relative group hover:border-gold-500/40 transition-all duration-300">
+            <div class="w-full md:w-2/5 aspect-[3/4] md:aspect-auto md:h-64 rounded-2xl overflow-hidden bg-stone-100 shrink-0 relative border border-[#e7e2d6]/60">
+              <!-- Note: This image is a placeholder. You can easily replace this Unsplash URL with your own owner photograph once captured! -->
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600" alt="Aman Verma - Shri Balaji Jewellers Owner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer">
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-950/20 via-transparent to-transparent opacity-60"></div>
+            </div>
+            <div class="flex flex-col justify-between h-full">
+              <div>
+                <span class="font-display text-[9px] tracking-widest text-gold-600 font-semibold mb-1 block uppercase">Founder &amp; Proprietor</span>
+                <h3 class="font-display text-base font-bold text-stone-900 tracking-wider mb-2">
+                  AMAN VERMA
+                </h3>
+                <div class="h-[1px] w-10 bg-gold-500/40 mb-4"></div>
+                <p class="text-xs text-stone-600 font-light leading-relaxed mb-4">
+                  Guided by a generational dedication to premium jewelry crafting, Aman Verma leads Shri Balaji Jewellers with a sole mission: delivering 100% certified gold purity and absolute pricing transparency.
+                </p>
+                <p class="text-[11px] text-stone-500 italic leading-relaxed">
+                  "At SBJ, we do not just sell jewelry; we forge lifetime bonds of trust with our families in West Uttar Pradesh. We welcome you to experience certified heritage purity."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Showroom -->
+          <div class="bg-white border border-[#e7e2d6] p-7 md:p-8 rounded-[32px] flex flex-col md:flex-row gap-6 items-center shadow-lg relative group hover:border-gold-500/40 transition-all duration-300">
+            <div class="w-full md:w-2/5 aspect-[3/4] md:aspect-auto md:h-64 rounded-2xl overflow-hidden bg-stone-100 shrink-0 relative border border-[#e7e2d6]/60">
+              <!-- Showroom Slides -->
+              <div class="relative w-full h-full">
+                <img id="showroom-slide-0" src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600" alt="Shri Balaji Jewellers Showroom Pilkhuwa - Exclusive Displays" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 opacity-100 scale-100" referrerpolicy="no-referrer">
+                <img id="showroom-slide-1" src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&q=80&w=600" alt="Shri Balaji Jewellers Showroom Pilkhuwa - Exquisite Craft" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 opacity-0 scale-105" referrerpolicy="no-referrer">
+                <img id="showroom-slide-2" src="https://images.unsplash.com/photo-1588444839799-eb6cd27e3e26?auto=format&fit=crop&q=80&w=600" alt="Shri Balaji Jewellers Showroom Pilkhuwa - Luxury Lounge" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 opacity-0 scale-105" referrerpolicy="no-referrer">
+              </div>
+              
+              <!-- Dark Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent opacity-60 pointer-events-none"></div>
+
+              <!-- Controls Overlay -->
+              <div class="absolute bottom-3 right-3 flex gap-1.5 z-10">
+                <button onclick="navigateShowroomSlide(-1)" class="w-6 h-6 rounded-full bg-black/50 text-gold-400 hover:bg-black/70 flex items-center justify-center transition-all cursor-pointer border border-gold-500/20 hover:border-gold-500/50">
+                  <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="navigateShowroomSlide(1)" class="w-6 h-6 rounded-full bg-black/50 text-gold-400 hover:bg-black/70 flex items-center justify-center transition-all cursor-pointer border border-gold-500/20 hover:border-gold-500/50">
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+
+              <!-- Slide Indicators -->
+              <div class="absolute bottom-3 left-3 flex gap-1 z-10">
+                <span id="showroom-dot-0" class="w-3 h-1 rounded-full bg-gold-400 transition-all duration-300"></span>
+                <span id="showroom-dot-1" class="w-1 h-1 rounded-full bg-white/40 transition-all duration-300"></span>
+                <span id="showroom-dot-2" class="w-1 h-1 rounded-full bg-white/40 transition-all duration-300"></span>
+              </div>
+            </div>
+            <div class="flex flex-col justify-between h-full">
+              <div>
+                <span class="font-display text-[9px] tracking-widest text-gold-600 font-semibold mb-1 block uppercase">Exclusive Boutique Store</span>
+                <h3 class="font-display text-base font-bold text-stone-900 tracking-wider mb-2">
+                  PILKHUWA SHOWROOM
+                </h3>
+                <div class="h-[1px] w-10 bg-gold-500/40 mb-4"></div>
+                <p class="text-xs text-stone-600 font-light leading-relaxed mb-4">
+                  Step inside our state-of-the-art jewelry showroom situated in Pilkhuwa, Hapur. Designed to offer a private, high-comfort luxury shopping experience for bridal and heavy investment-grade orders.
+                </p>
+                <div class="flex flex-col gap-2 text-[11px] text-stone-500 font-mono mt-2 pt-2 border-t border-stone-150">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="clock" class="text-gold-600 w-3.5 h-3.5"></i>
+                    <span>Open 10:30 AM — 08:30 PM (Mon-Sat)</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="shield-check" class="text-gold-600 w-3.5 h-3.5"></i>
+                    <span>In-store BIS Hallmark verification service</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Trust Badges Bar -->
-    <div class="bg-[#050506] border-y border-zinc-900/80 py-10">
+    <div class="bg-[#fcfbf9] border-y border-stone-200/80 py-10">
       <div class="max-w-7xl mx-auto px-6 md:px-12">
         <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-start justify-center">
           
           <div class="flex flex-col items-center text-center group">
             <div class="mb-3.5 transform group-hover:scale-110 transition-transform duration-300">
-              <i data-lucide="award" class="text-gold-400 stroke-1 w-7 h-7"></i>
+              <i data-lucide="award" class="text-gold-600 stroke-1 w-7 h-7"></i>
             </div>
-            <h4 class="font-display text-[10px] md:text-[11px] font-bold text-gold-100 tracking-[0.15em] mb-1">
+            <h4 class="font-display text-[10px] md:text-[11px] font-bold text-stone-900 tracking-[0.15em] mb-1">
               100% HALLMARKED
             </h4>
-            <p class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold">
+            <p class="text-[9px] text-stone-500 uppercase tracking-widest font-semibold">
               JEWELLERY
             </p>
           </div>
 
           <div class="flex flex-col items-center text-center group">
             <div class="mb-3.5 transform group-hover:scale-110 transition-transform duration-300">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-gold-400 stroke-1">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-gold-600 stroke-1">
                 <polygon points="12,2 22,20 2,20" stroke="currentColor" stroke-width="1.5" />
                 <circle cx="12" cy="13" r="3" stroke="currentColor" stroke-width="1.5" />
               </svg>
             </div>
-            <h4 class="font-display text-[10px] md:text-[11px] font-bold text-gold-100 tracking-[0.15em] mb-1">
+            <h4 class="font-display text-[10px] md:text-[11px] font-bold text-stone-900 tracking-[0.15em] mb-1">
               BIS CERTIFIED
             </h4>
-            <p class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold">
+            <p class="text-[9px] text-stone-500 uppercase tracking-widest font-semibold">
               REGISTRATION
             </p>
           </div>
 
           <div class="flex flex-col items-center text-center group">
             <div class="mb-3.5 transform group-hover:scale-110 transition-transform duration-300">
-              <i data-lucide="users" class="text-gold-400 stroke-1 w-7 h-7"></i>
+              <i data-lucide="users" class="text-gold-600 stroke-1 w-7 h-7"></i>
             </div>
-            <h4 class="font-display text-[10px] md:text-[11px] font-bold text-gold-100 tracking-[0.15em] mb-1">
+            <h4 class="font-display text-[10px] md:text-[11px] font-bold text-stone-900 tracking-[0.15em] mb-1">
               TRUSTED BY
             </h4>
-            <p class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold">
+            <p class="text-[9px] text-stone-500 uppercase tracking-widest font-semibold">
               THOUSANDS OF CUSTOMERS
             </p>
           </div>
 
           <div class="flex flex-col items-center text-center group">
             <div class="mb-3.5 transform group-hover:scale-110 transition-transform duration-300">
-              <div class="font-display font-bold text-lg text-gold-400 border border-gold-400/30 w-7 h-7 flex items-center justify-center rounded-sm text-center">
+              <div class="font-display font-bold text-lg text-gold-600 border border-gold-600/30 w-7 h-7 flex items-center justify-center rounded-full text-center">
                 ₹
               </div>
             </div>
-            <h4 class="font-display text-[10px] md:text-[11px] font-bold text-gold-100 tracking-[0.15em] mb-1">
+            <h4 class="font-display text-[10px] md:text-[11px] font-bold text-stone-900 tracking-[0.15em] mb-1">
               TRANSPARENT
             </h4>
-            <p class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold">
+            <p class="text-[9px] text-stone-500 uppercase tracking-widest font-semibold">
               PRICING GUARANTEE
             </p>
           </div>
 
           <div class="flex flex-col items-center text-center group col-span-2 md:col-span-1">
             <div class="mb-3.5 transform group-hover:scale-110 transition-transform duration-300">
-              <i data-lucide="refresh-cw" class="text-gold-400 stroke-1 w-7 h-7"></i>
+              <i data-lucide="refresh-cw" class="text-gold-600 stroke-1 w-7 h-7"></i>
             </div>
-            <h4 class="font-display text-[10px] md:text-[11px] font-bold text-gold-100 tracking-[0.15em] mb-1">
+            <h4 class="font-display text-[10px] md:text-[11px] font-bold text-stone-900 tracking-[0.15em] mb-1">
               EXCHANGE & BUYBACK
             </h4>
-            <p class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold">
+            <p class="text-[9px] text-stone-500 uppercase tracking-widest font-semibold">
               EASY SCHEMES
             </p>
           </div>
@@ -667,28 +598,28 @@
     </div>
 
     <!-- About Us, Reviews and Visit Store Info Section -->
-    <section id="about" class="py-20 bg-black border-t border-zinc-900">
+    <section id="about" class="py-20 bg-white border-t border-stone-200">
       <div class="max-w-7xl mx-auto px-6 md:px-12">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-stretch">
           
           <!-- Column 1: About Us -->
-          <div class="flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-zinc-900 pb-10 lg:pb-0 lg:pr-10">
+          <div class="flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-stone-150 pb-10 lg:pb-0 lg:pr-10">
             <div>
-              <span class="font-display text-[10px] tracking-widest text-gold-400 font-semibold mb-2 block">ESTD. HERITAGE</span>
-              <h3 class="font-display text-lg font-bold text-gold-100 tracking-wider mb-4 uppercase">
+              <span class="font-display text-[10px] tracking-widest text-gold-600 font-semibold mb-2 block">ESTD. HERITAGE</span>
+              <h3 class="font-display text-lg font-bold text-stone-900 tracking-wider mb-4 uppercase">
                 ABOUT US
               </h3>
               <div class="h-[1px] w-12 bg-gold-500/40 mb-6"></div>
-              <p class="font-serif text-sm text-zinc-400 italic leading-relaxed mb-6">
+              <p class="font-serif text-sm text-stone-600 italic leading-relaxed mb-6">
                 "Shri Balaji Jewellers is a trusted name in gold & silver jewellery. We are committed to purity, quality and customer satisfaction since our inception. Every design tells a story of elegance and precision."
               </p>
-              <p class="text-xs text-zinc-500 font-light leading-relaxed mb-8">
+              <p class="text-xs text-stone-500 font-light leading-relaxed mb-8">
                 Located in the heart of Pilkhuwa, Hapur, our family-owned showroom houses masterfully designed items ranging from minimal daily wear trinkets to opulent heavy bridal trousseaus. We operate under strict BIS Hallmarking regulations.
               </p>
             </div>
 
             <div>
-              <button onclick="toggleAboutModal(true)" class="inline-flex items-center gap-2 border border-gold-500/30 hover:border-gold-400 bg-gold-950/10 hover:bg-gold-500/10 text-gold-400 hover:text-gold-300 font-display text-[10px] tracking-widest font-semibold px-5 py-3 rounded-xs transition-all duration-300 cursor-pointer">
+              <button onclick="toggleAboutModal(true)" class="inline-flex items-center gap-2 border border-gold-500/30 hover:border-gold-500 bg-gold-50/20 hover:bg-gold-500/10 text-gold-700 hover:text-gold-800 font-display text-[10px] tracking-widest font-semibold px-6 py-3.5 rounded-full transition-all duration-300 cursor-pointer">
                 <span>KNOW MORE</span>
                 <i data-lucide="arrow-right" class="w-3 h-3"></i>
               </button>
@@ -696,17 +627,13 @@
           </div>
 
           <!-- Column 2: Reviews Slider -->
-          <div class="flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-zinc-900 pb-10 lg:pb-0 lg:px-6">
+          <div class="flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-stone-150 pb-10 lg:pb-0 lg:px-6">
             <div>
-              <span class="font-display text-[10px] tracking-widest text-gold-400 font-semibold mb-2 block">WORD OF MOUTH</span>
+              <span class="font-display text-[10px] tracking-widest text-gold-600 font-semibold mb-2 block">WORD OF MOUTH</span>
               <div class="flex justify-between items-center mb-4">
-                <h3 class="font-display text-lg font-bold text-gold-100 tracking-wider uppercase">
+                <h3 class="font-display text-lg font-bold text-stone-900 tracking-wider uppercase">
                   CUSTOMER REVIEWS
                 </h3>
-                <button onclick="toggleReviewForm(true)" class="flex items-center gap-1 text-[9px] font-display tracking-widest font-semibold text-gold-400 hover:text-gold-200 border border-gold-500/20 px-2 py-1 rounded-sm">
-                  <i data-lucide="plus" class="w-2.5 h-2.5"></i>
-                  <span>WRITE ONE</span>
-                </button>
               </div>
               <div class="h-[1px] w-12 bg-gold-500/40 mb-6"></div>
 
@@ -720,14 +647,14 @@
                   <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
                   <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
                 </div>
-                <p id="review-text" class="font-serif text-sm text-zinc-300 italic leading-relaxed mb-4">
+                <p id="review-text" class="font-serif text-sm text-stone-600 italic leading-relaxed mb-4">
                   "Excellent collection and genuine products. The staff is very cooperative and the designs are beautiful."
                 </p>
                 <div class="flex items-center gap-2">
-                  <span id="review-author" class="text-xs font-semibold text-gold-300">
+                  <span id="review-author" class="text-xs font-semibold text-gold-700">
                     &mdash; Pooja Sharma
                   </span>
-                  <span id="review-badge" class="text-[9px] bg-gold-500/10 border border-gold-500/20 text-gold-400 px-1.5 py-0.5 rounded-sm uppercase font-semibold">
+                  <span id="review-badge" class="text-[9px] bg-gold-50 border border-gold-200 text-gold-700 px-1.5 py-0.5 rounded-sm uppercase font-semibold">
                     Verified Customer
                   </span>
                 </div>
@@ -737,17 +664,17 @@
               <div id="review-form-wrapper" class="hidden min-h-[140px] flex flex-col justify-center">
                 <form id="new-review-form" onsubmit="submitCustomReview(event)" class="space-y-3">
                   <div class="grid grid-cols-2 gap-2">
-                    <input id="input-reviewer" type="text" required placeholder="Your Name" class="bg-black text-xs text-zinc-300 border border-zinc-800 rounded-xs py-1.5 px-2 focus:outline-none focus:border-gold-500">
-                    <select id="input-rating" class="bg-black text-xs text-zinc-400 border border-zinc-800 rounded-xs py-1.5 px-2 focus:outline-none focus:border-gold-500">
+                    <input id="input-reviewer" type="text" required placeholder="Your Name" class="bg-[#faf8f5] text-xs text-stone-800 border border-stone-200 rounded-full py-2 px-4 focus:outline-none focus:border-gold-500">
+                    <select id="input-rating" class="bg-[#faf8f5] text-xs text-stone-600 border border-stone-200 rounded-full py-2 px-4 focus:outline-none focus:border-gold-500">
                       <option value="5">5 Stars</option>
                       <option value="4">4 Stars</option>
                       <option value="3">3 Stars</option>
                     </select>
                   </div>
-                  <textarea id="input-review-text" required rows="2" placeholder="Write your review here..." class="w-full bg-black text-xs text-zinc-300 border border-zinc-800 rounded-xs py-1.5 px-2 focus:outline-none focus:border-gold-500 resize-none"></textarea>
+                  <textarea id="input-review-text" required rows="2" placeholder="Write your review here..." class="w-full bg-[#faf8f5] text-xs text-stone-800 border border-stone-200 rounded-2xl py-2.5 px-4 focus:outline-none focus:border-gold-500 resize-none"></textarea>
                   <div class="flex gap-2">
-                    <button type="submit" class="bg-gold-500 hover:bg-gold-400 text-black text-[9px] font-display tracking-widest font-bold py-1.5 px-3 rounded-xs flex-1 cursor-pointer">SUBMIT</button>
-                    <button type="button" onclick="toggleReviewForm(false)" class="bg-zinc-900 border border-zinc-800 text-[9px] font-display tracking-widest font-semibold py-1.5 px-3 rounded-xs flex-1 cursor-pointer">CANCEL</button>
+                    <button type="submit" class="bg-gold-500 hover:bg-gold-400 text-black text-[9px] font-display tracking-widest font-bold py-2.5 px-4 rounded-full flex-1 cursor-pointer">SUBMIT</button>
+                    <button type="button" onclick="toggleReviewForm(false)" class="bg-stone-100 hover:bg-stone-200 border border-stone-200 text-stone-700 text-[9px] font-display tracking-widest font-semibold py-2.5 px-4 rounded-full flex-1 cursor-pointer">CANCEL</button>
                   </div>
                 </form>
               </div>
@@ -762,69 +689,69 @@
           <!-- Column 3: Visit Our Store & Interactive Custom Vector Map -->
           <div class="flex flex-col justify-between lg:pl-10">
             <div>
-              <span class="font-display text-[10px] tracking-widest text-gold-400 font-semibold mb-2 block">STORE LOCATION</span>
-              <h3 class="font-display text-lg font-bold text-gold-100 tracking-wider mb-4 uppercase">
+              <span class="font-display text-[10px] tracking-widest text-gold-600 font-semibold mb-2 block">STORE LOCATION</span>
+              <h3 class="font-display text-lg font-bold text-stone-900 tracking-wider mb-4 uppercase">
                 VISIT OUR STORE
               </h3>
               <div class="h-[1px] w-12 bg-gold-500/40 mb-6"></div>
 
-              <div class="flex flex-col gap-4 text-xs text-zinc-400 mb-6 font-light">
+              <div class="flex flex-col gap-4 text-xs text-stone-600 mb-6 font-light">
                 <div class="flex items-start gap-2.5">
-                  <i data-lucide="map-pin" class="text-gold-400 w-4 h-4 shrink-0 mt-0.5"></i>
+                  <i data-lucide="map-pin" class="text-gold-600 w-4 h-4 shrink-0 mt-0.5"></i>
                   <div>
-                    <h4 class="font-semibold text-zinc-200">Shri Balaji Jewellers</h4>
-                    <p class="mt-0.5 text-zinc-400">Pillar Number - 45, Behind the Rajputana Regiment College Village Khera Road, Pilkhuwa (Hapur), 245304.</p>
+                    <h4 class="font-semibold text-stone-800">Shri Balaji Jewellers</h4>
+                    <p class="mt-0.5 text-stone-500 leading-relaxed">Pillar Number - 45, Behind the Rajputana Regiment College Village Khera Road, Pilkhuwa (Hapur), 245304.</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-2.5">
-                  <i data-lucide="user" class="text-gold-400 w-4 h-4 shrink-0 mt-0.5"></i>
+                  <i data-lucide="user" class="text-gold-600 w-4 h-4 shrink-0 mt-0.5"></i>
                   <div>
-                    <h4 class="font-semibold text-zinc-200">Owner</h4>
-                    <p class="mt-0.5 text-zinc-400">Aman Verma</p>
+                    <h4 class="font-semibold text-stone-800">Owner</h4>
+                    <p class="mt-0.5 text-stone-500">Aman Verma</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Custom Luxury Dark Vector Map matching mockup exactly -->
-            <div class="relative aspect-video w-full rounded-sm border border-zinc-900 overflow-hidden bg-[#0c0c0e] flex items-center justify-center p-3 mb-6 group">
-              <div class="absolute inset-0 bg-radial-gradient from-transparent to-[#0a0a0c] opacity-80"></div>
+            <!-- Custom Luxury Vector Map matching mockup exactly in light shades -->
+            <div class="relative aspect-video w-full rounded-3xl border border-stone-200 overflow-hidden bg-[#fcfbf9] flex items-center justify-center p-3 mb-6 group shadow-md">
+              <div class="absolute inset-0 bg-radial-gradient from-transparent to-[#f5f2eb] opacity-80"></div>
               
               <!-- Roads Grid Gridlines -->
               <div class="absolute inset-0 opacity-15">
-                <div class="absolute top-[20%] left-0 right-0 h-[2px] bg-gold-500"></div>
-                <div class="absolute bottom-[30%] left-0 right-0 h-[1.5px] bg-gold-500"></div>
-                <div class="absolute left-[35%] top-0 bottom-0 w-[1.5px] bg-gold-500"></div>
-                <div class="absolute right-[25%] top-0 bottom-0 w-[1px] bg-gold-500"></div>
-                <div class="absolute top-[10%] left-[20%] rotate-12 w-full h-[1px] bg-gold-500"></div>
+                <div class="absolute top-[20%] left-0 right-0 h-[2px] bg-gold-600"></div>
+                <div class="absolute bottom-[30%] left-0 right-0 h-[1.5px] bg-gold-600"></div>
+                <div class="absolute left-[35%] top-0 bottom-0 w-[1.5px] bg-gold-600"></div>
+                <div class="absolute right-[25%] top-0 bottom-0 w-[1px] bg-gold-600"></div>
+                <div class="absolute top-[10%] left-[20%] rotate-12 w-full h-[1px] bg-gold-600"></div>
               </div>
 
               <!-- Map labels -->
-              <div class="relative w-full h-full flex flex-col justify-between text-[8px] font-mono text-zinc-600 select-none">
+              <div class="relative w-full h-full flex flex-col justify-between text-[8px] font-mono text-stone-400 select-none">
                 <div class="flex justify-between">
-                  <span class="bg-zinc-950/80 px-1 py-0.5 rounded-sm">Hapur Bypass Road</span>
-                  <span class="bg-zinc-950/80 px-1 py-0.5 rounded-sm">Pilkhuwa Bus Stand</span>
+                  <span class="bg-white/90 border border-stone-100 px-1 py-0.5 rounded-full">Hapur Bypass Road</span>
+                  <span class="bg-white/90 border border-stone-100 px-1 py-0.5 rounded-full">Pilkhuwa Bus Stand</span>
                 </div>
                 
                 <!-- Glowing Golden Pin -->
                 <div class="absolute left-[58%] top-[42%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
                   <div class="relative flex items-center justify-center">
-                    <span class="absolute animate-ping h-5 w-5 rounded-full bg-gold-500 opacity-75"></span>
-                    <span class="relative rounded-full h-2.5 w-2.5 bg-gold-500 border border-black shadow-lg"></span>
+                    <span class="absolute animate-ping h-5 w-5 rounded-full bg-gold-600 opacity-65"></span>
+                    <span class="relative rounded-full h-2.5 w-2.5 bg-gold-600 border border-white shadow-md animate-pulse"></span>
                   </div>
-                  <span class="mt-1 bg-black border border-gold-500/40 text-gold-400 font-display font-semibold px-1.5 py-0.5 rounded-xs text-[7px] tracking-widest uppercase shadow-xl">
+                  <span class="mt-1 bg-stone-900 border border-gold-400/40 text-gold-400 font-display font-semibold px-2 py-0.5 rounded-full text-[7px] tracking-widest uppercase shadow-md">
                     SBJ SHOWROOM
                   </span>
                 </div>
 
                 <div class="flex justify-end">
-                  <span class="bg-zinc-950/80 px-1 py-0.5 rounded-sm">To Hapur</span>
+                  <span class="bg-white/90 border border-stone-100 px-1 py-0.5 rounded-full">To Hapur</span>
                 </div>
               </div>
             </div>
 
             <div>
-              <button onclick="openGoogleMapDirections()" class="w-full bg-gold-500 hover:bg-gold-400 text-black font-display text-[10px] tracking-[0.25em] font-bold py-3.5 px-6 rounded-sm flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-[1.01] shadow-lg cursor-pointer">
+              <button onclick="openGoogleMapDirections()" class="w-full bg-gold-500 hover:bg-gold-400 text-black font-display text-[10px] tracking-[0.25em] font-bold py-3.5 px-6 rounded-full flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-[1.01] shadow-md cursor-pointer">
                 <i data-lucide="navigation" class="w-3.5 h-3.5 fill-current"></i>
                 <span>DIRECTIONS</span>
               </button>
@@ -836,19 +763,19 @@
     </section>
 
     <!-- Footer Details -->
-    <footer class="bg-[#050506] text-zinc-400 text-xs pt-16 pb-8 border-t border-zinc-900">
+    <footer class="bg-[#1c1917] text-stone-300 text-xs pt-16 pb-8 border-t border-stone-800">
       <div class="max-w-7xl mx-auto px-6 md:px-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           
           <!-- Col 1: Brand Info -->
           <div class="space-y-4">
             <div class="flex items-center gap-3 cursor-pointer" onclick="scrollToSection('home')">
-              <div class="w-10 h-10 rounded-full border border-gold-500/80 flex flex-col items-center justify-center bg-black">
+              <div class="w-10 h-10 rounded-full border border-gold-400/80 flex flex-col items-center justify-center bg-stone-900/60">
                 <span class="font-display font-bold text-xs tracking-widest text-gold-400">SBJ</span>
               </div>
               <div>
-                <h4 class="font-display text-sm font-bold tracking-widest text-gold-100">
-                  SHRI BALAJI
+                <h4 class="font-display text-sm font-bold tracking-widest text-gold-100 uppercase">
+                  Shri Balaji
                 </h4>
                 <p class="font-display text-[10px] tracking-[0.2em] text-gold-400 leading-none mt-0.5">
                   JEWELLERS
@@ -856,53 +783,53 @@
               </div>
             </div>
             
-            <p class="font-serif text-[11px] text-zinc-500 italic leading-relaxed pt-2">
+            <p class="font-serif text-[11px] text-stone-400 italic leading-relaxed pt-2">
               Our commitment lies in absolute transparency, guaranteed 22K/24K BIS Hallmarked purity, and timeless elegance carved into every single design.
             </p>
             
-            <div class="flex items-center gap-2 text-gold-500 font-display text-[9px] tracking-widest font-bold">
-              <i data-lucide="sparkles" class="w-3 h-3"></i>
+            <div class="flex items-center gap-2 text-gold-400 font-display text-[9px] tracking-widest font-bold">
+              <i data-lucide="sparkles" class="w-3 h-3 text-gold-400"></i>
               <span>TRUST &bull; PURITY &bull; ELEGANCE</span>
             </div>
           </div>
 
           <!-- Col 2: Quick Links -->
           <div class="space-y-4">
-            <h4 class="font-display text-xs font-bold tracking-wider text-gold-200 uppercase">
+            <h4 class="font-display text-xs font-bold tracking-wider text-gold-300 uppercase">
               QUICK LINKS
             </h4>
             <div class="h-[1px] w-8 bg-gold-500/30"></div>
-            <ul class="space-y-2.5 text-zinc-400 text-[11px] font-medium tracking-wide">
-              <li><button onclick="scrollToSection('home')" class="hover:text-gold-300 transition-colors text-left cursor-pointer">Home</button></li>
-              <li><button onclick="scrollToSection('rates')" class="hover:text-gold-300 transition-colors text-left cursor-pointer text-gold-400 font-semibold">Live Metal Rates &amp; Estimator</button></li>
-              <li><button onclick="scrollToSection('collections', 'gold')" class="hover:text-gold-300 transition-colors text-left cursor-pointer">Gold Jewellery</button></li>
-              <li><button onclick="scrollToSection('collections', 'silver')" class="hover:text-gold-300 transition-colors text-left cursor-pointer">Silver Jewellery</button></li>
-              <li><button onclick="scrollToSection('collections', 'bridal')" class="hover:text-gold-300 transition-colors text-left cursor-pointer">Bridal Collection</button></li>
-              <li><button onclick="scrollToSection('about')" class="hover:text-gold-300 transition-colors text-left cursor-pointer">About Us</button></li>
+            <ul class="space-y-2.5 text-stone-300 text-[11px] font-medium tracking-wide">
+              <li><button onclick="scrollToSection('home')" class="hover:text-gold-400 transition-colors text-left cursor-pointer">Home</button></li>
+              <li><button onclick="scrollToSection('owner')" class="hover:text-gold-400 transition-colors text-left cursor-pointer">Owner &amp; Showroom</button></li>
+              <li><button onclick="scrollToSection('collections', 'gold')" class="hover:text-gold-400 transition-colors text-left cursor-pointer">Gold Jewellery</button></li>
+              <li><button onclick="scrollToSection('collections', 'silver')" class="hover:text-gold-400 transition-colors text-left cursor-pointer">Silver Jewellery</button></li>
+              <li><button onclick="scrollToSection('collections', 'bridal')" class="hover:text-gold-400 transition-colors text-left cursor-pointer">Bridal Collection</button></li>
+              <li><button onclick="scrollToSection('about')" class="hover:text-gold-400 transition-colors text-left cursor-pointer">About Us</button></li>
             </ul>
           </div>
 
           <!-- Col 3: Contact Info -->
           <div class="space-y-4">
-            <h4 class="font-display text-xs font-bold tracking-wider text-gold-200 uppercase">
+            <h4 class="font-display text-xs font-bold tracking-wider text-gold-300 uppercase">
               CONTACT US
             </h4>
             <div class="h-[1px] w-8 bg-gold-500/30"></div>
-            <ul class="space-y-3.5 text-zinc-500 text-[11px] leading-relaxed">
+            <ul class="space-y-3.5 text-stone-400 text-[11px] leading-relaxed">
               <li class="flex items-start gap-2.5">
-                <i data-lucide="map-pin" class="text-gold-500 w-3.5 h-3.5 shrink-0 mt-0.5"></i>
-                <span class="text-zinc-400">Pillar Number - 45, Behind the Rajputana Regiment College Village Khera Road, Pilkhuwa (Hapur), 245304.</span>
+                <i data-lucide="map-pin" class="text-gold-400 w-3.5 h-3.5 shrink-0 mt-0.5"></i>
+                <span class="text-stone-300">Pillar Number - 45, Behind the Rajputana Regiment College Village Khera Road, Pilkhuwa (Hapur), 245304.</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i data-lucide="phone" class="text-gold-500 w-3.5 h-3.5 shrink-0"></i>
-                <div class="text-zinc-400 space-y-0.5">
-                  <a href="tel:+916396330055" class="hover:text-gold-300 transition-colors block">+91 63963 30055</a>
-                  <a href="tel:+916396330055" class="hover:text-gold-300 transition-colors block">WhatsApp: +91 63963 30055</a>
+                <i data-lucide="phone" class="text-gold-400 w-3.5 h-3.5 shrink-0"></i>
+                <div class="text-stone-300 space-y-0.5">
+                  <a href="tel:+916396330055" class="hover:text-gold-400 transition-colors block">+91 63963 30055</a>
+                  <a href="tel:+916396330055" class="hover:text-gold-400 transition-colors block">WhatsApp: +91 63963 30055</a>
                 </div>
               </li>
               <li class="flex items-center gap-2.5">
-                <i data-lucide="mail" class="text-gold-500 w-3.5 h-3.5 shrink-0"></i>
-                <a href="mailto:shribalajiJewellers0102@gmail.com" class="text-zinc-400 hover:text-gold-300 transition-colors">
+                <i data-lucide="mail" class="text-gold-400 w-3.5 h-3.5 shrink-0"></i>
+                <a href="mailto:shribalajiJewellers0102@gmail.com" class="text-stone-300 hover:text-gold-400 transition-colors">
                   shribalajiJewellers0102@gmail.com
                 </a>
               </li>
@@ -911,24 +838,26 @@
 
           <!-- Col 4: Social handles -->
           <div class="space-y-4">
-            <h4 class="font-display text-xs font-bold tracking-wider text-gold-200 uppercase">
+            <h4 class="font-display text-xs font-bold tracking-wider text-gold-300 uppercase">
               FOLLOW US
             </h4>
             <div class="h-[1px] w-8 bg-gold-500/30"></div>
-            <p class="text-[11px] text-zinc-500 leading-relaxed">
+            <p class="text-[11px] text-stone-400 leading-relaxed">
               Stay connected with us for the latest design arrivals, gold rate warnings, and festive booking schemes.
             </p>
             <div class="flex gap-3 pt-2">
-              <a href="https://instagram.com/sbj_jewels0102" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-zinc-800 hover:border-pink-500/40 hover:bg-pink-500/10 flex items-center justify-center text-zinc-400 hover:text-pink-500 transition-all duration-300 shadow-sm" title="Follow on Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>              </a>
-              <a href="https://wa.me/916396330055?text=Hello%20Shri%20Balaji%20Jewellers!%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20exquisite%20jewellery%20collections." target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-zinc-800 hover:border-emerald-500/40 hover:bg-emerald-500/10 flex items-center justify-center text-zinc-400 hover:text-emerald-500 transition-all duration-300 shadow-sm" title="Chat on WhatsApp">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>              </a>
+              <a href="https://instagram.com/sbj_jewels0102" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-stone-800 hover:border-pink-500/40 hover:bg-pink-500/10 flex items-center justify-center text-stone-300 hover:text-pink-500 transition-all duration-300 shadow-sm" title="Follow on Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+              </a>
+              <a href="https://wa.me/916396330055?text=Hello%20Shri%20Balaji%20Jewellers!%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20exquisite%20jewellery%20collections." target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-stone-800 hover:border-emerald-500/40 hover:bg-emerald-500/10 flex items-center justify-center text-stone-300 hover:text-emerald-500 transition-all duration-300 shadow-sm" title="Chat on WhatsApp">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
         </div>
 
-        <div class="border-t border-zinc-900/80 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-zinc-500 font-light">
+        <div class="border-t border-stone-800/80 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-stone-500 font-light">
           <div id="copyright-text">
             &copy; 2026 Shri Balaji Jewellers. All Rights Reserved.
           </div>
@@ -946,31 +875,31 @@
       <span class="absolute animate-ping h-14 w-14 rounded-full bg-emerald-500 opacity-25"></span>
       <span class="absolute animate-pulse h-16 w-16 rounded-full bg-gold-400/10"></span>
       <a href="https://wa.me/916396330055?text=Hello%20Shri%20Balaji%20Jewellers!%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20gorgeous%20jewellery." target="_blank" rel="noopener noreferrer" class="relative bg-emerald-500 hover:bg-emerald-400 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 focus:outline-none" title="Chat on WhatsApp">
-        <i data-lucide="message-circle" class="w-6 h-6 fill-current"></i>
+        <i data-lucide="message-circle" class="w-5.5 h-5.5"></i>
       </a>
     </div>
 
     <!-- Modals Layout Area -->
     
     <!-- 1. Product Detail Modal Overlay -->
-    <div id="product-modal" onclick="closeProductModal()" class="fixed inset-0 bg-black/85 z-50 flex items-center justify-center p-4 backdrop-blur-xs hidden">
-      <div class="bg-[#0c0c0e] border border-gold-500/20 max-w-2xl w-full rounded-sm overflow-hidden relative shadow-2xl transition-all transform scale-95 duration-200" onclick="event.stopPropagation()">
+    <div id="product-modal" onclick="closeProductModal()" class="fixed inset-0 bg-stone-900/60 z-50 flex items-center justify-center p-4 backdrop-blur-xs hidden">
+      <div class="bg-white border border-[#e7e2d6] max-w-2xl w-full rounded-sm overflow-hidden relative shadow-2xl transition-all transform scale-95 duration-200" onclick="event.stopPropagation()">
         
         <!-- Close button -->
-        <button onclick="closeProductModal()" class="absolute top-4 right-4 z-10 p-2 text-zinc-400 hover:text-gold-400 transition-colors bg-black/50 rounded-full">
+        <button onclick="closeProductModal()" class="absolute top-4 right-4 z-10 p-2 text-stone-500 hover:text-stone-900 transition-colors bg-stone-100 hover:bg-stone-200 rounded-full cursor-pointer">
           <i data-lucide="x" class="w-4 h-4"></i>
         </button>
 
         <div class="grid grid-cols-1 md:grid-cols-2">
           <!-- Left Image Column -->
-          <div class="relative h-64 md:h-full min-h-[300px] bg-zinc-950">
+          <div class="relative h-64 md:h-full min-h-[300px] bg-stone-50">
             <img id="modal-img" src="" alt="Product Image" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent"></div>
             <div class="absolute bottom-4 left-4">
-              <span id="modal-badge" class="bg-gold-500 text-black font-display font-bold text-[9px] tracking-widest px-2.5 py-1 uppercase rounded-xs">
+              <span id="modal-badge" class="bg-gold-500 text-black font-display font-bold text-[9px] tracking-widest px-2.5 py-1 uppercase rounded-sm shadow-sm">
                 GOLD
               </span>
-              <span id="modal-id" class="ml-2 font-mono text-[10px] text-zinc-400 bg-black/50 px-2 py-1 rounded-xs">
+              <span id="modal-id" class="ml-2 font-mono text-[9px] text-gold-300 bg-stone-900/90 px-2.5 py-1 rounded-sm shadow-sm">
                 SBJ-01
               </span>
             </div>
@@ -979,30 +908,30 @@
           <!-- Right Info Column -->
           <div class="p-6 md:p-8 flex flex-col justify-between">
             <div>
-              <h3 id="modal-title" class="font-display text-base md:text-lg font-bold text-gold-100 tracking-wider mb-2">
+              <h3 id="modal-title" class="font-display text-base md:text-lg font-bold text-stone-900 tracking-wider mb-2 uppercase">
                 Product Title
               </h3>
-              <div class="h-[1px] w-12 bg-gold-500/40 mb-4"></div>
-              <p id="modal-desc" class="text-xs text-zinc-400 font-light leading-relaxed mb-5">
+              <div class="h-[1px] w-12 bg-gold-500/60 mb-4"></div>
+              <p id="modal-desc" class="text-xs text-stone-600 font-light leading-relaxed mb-5">
                 Product descriptions and unique handcraft highlights go here.
               </p>
 
               <!-- Metal & Weight Specs -->
-              <div class="grid grid-cols-2 gap-4 mb-5 border-y border-zinc-900 py-4 text-xs font-mono">
-                <div>
-                  <span class="block text-[9px] text-zinc-500 uppercase tracking-widest font-semibold font-sans mb-0.5">METALS PURITY</span>
-                  <span id="modal-purity" class="text-gold-200 font-semibold">22K BIS Hallmarked</span>
+              <div id="modal-specs-container" class="grid grid-cols-2 gap-4 mb-5 border-y border-stone-100 py-4 text-xs font-mono">
+                <div id="modal-purity-container">
+                  <span class="block text-[8px] text-stone-400 uppercase tracking-widest font-semibold font-sans mb-0.5">METALS PURITY</span>
+                  <span id="modal-purity" class="text-stone-800 font-semibold font-sans">22K BIS Hallmarked</span>
                 </div>
-                <div>
-                  <span class="block text-[9px] text-zinc-500 uppercase tracking-widest font-sans font-semibold mb-0.5">ESTIMATED WEIGHT</span>
-                  <span id="modal-weight" class="text-gold-200 font-semibold">35g - 42g</span>
+                <div id="modal-weight-container">
+                  <span class="block text-[8px] text-stone-400 uppercase tracking-widest font-sans font-semibold mb-0.5">ESTIMATED WEIGHT</span>
+                  <span id="modal-weight" class="text-stone-800 font-semibold font-sans">35g - 42g</span>
                 </div>
               </div>
 
               <!-- Extra Quality bullet lists -->
-              <div class="mb-6">
-                <span class="block text-[9px] text-zinc-500 uppercase tracking-widest font-semibold mb-2">GUARANTEED SPECIFICATIONS</span>
-                <ul id="modal-bullet-list" class="text-[11px] text-zinc-400 space-y-1.5">
+              <div id="modal-details-container" class="mb-6">
+                <span id="modal-details-title" class="block text-[8px] text-stone-400 uppercase tracking-widest font-semibold mb-2">GUARANTEED SPECIFICATIONS</span>
+                <ul id="modal-bullet-list" class="text-[11px] text-stone-600 space-y-1.5 font-light">
                   <!-- dynamically filled -->
                 </ul>
               </div>
@@ -1010,7 +939,7 @@
 
             <!-- CTA -->
             <div class="flex gap-3">
-              <button id="modal-whatsapp-btn" onclick="triggerWhatsAppInquiry()" class="flex-1 bg-gold-500 hover:bg-gold-400 text-black py-3 px-4 rounded-xs text-xs font-display font-bold tracking-[0.2em] flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer">
+              <button id="modal-whatsapp-btn" onclick="triggerWhatsAppInquiry()" class="flex-1 bg-gold-500 hover:bg-gold-400 text-black py-3 px-4 rounded-sm text-xs font-display font-bold tracking-[0.2em] flex items-center justify-center gap-2 transition-all duration-300 shadow-sm cursor-pointer">
                 <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
                 <span>ENQUIRE ON WHATSAPP</span>
               </button>
@@ -1022,46 +951,46 @@
     </div>
 
     <!-- 2. About Us Detail Modal Overlay -->
-    <div id="about-modal" onclick="toggleAboutModal(false)" class="fixed inset-0 bg-black/85 z-50 flex items-center justify-center p-4 backdrop-blur-xs hidden">
-      <div class="bg-[#0c0c0e] border border-gold-500/20 max-w-lg w-full rounded-sm overflow-hidden relative shadow-2xl p-8 transition-all transform scale-95 duration-200" onclick="event.stopPropagation()">
+    <div id="about-modal" onclick="toggleAboutModal(false)" class="fixed inset-0 bg-stone-900/60 z-50 flex items-center justify-center p-4 backdrop-blur-xs hidden">
+      <div class="bg-white border border-[#e7e2d6] max-w-lg w-full rounded-sm overflow-hidden relative shadow-2xl p-8 transition-all transform scale-95 duration-200" onclick="event.stopPropagation()">
         
-        <button onclick="toggleAboutModal(false)" class="absolute top-4 right-4 text-zinc-400 hover:text-gold-400 p-2">
+        <button onclick="toggleAboutModal(false)" class="absolute top-4 right-4 text-stone-500 hover:text-stone-900 p-2 bg-stone-100 hover:bg-stone-200 rounded-full cursor-pointer">
           <i data-lucide="x" class="w-4 h-4"></i>
         </button>
 
         <div class="text-center mb-6">
-          <span class="font-display text-[10px] tracking-widest text-gold-400 font-semibold mb-1 block">OUR STORY</span>
-          <h3 class="font-display text-lg font-bold text-gold-100 tracking-wider uppercase">
-            SHRI BALAJI JEWELLERS
+          <span class="font-display text-[10px] tracking-widest text-gold-600 font-bold mb-1 block uppercase">OUR STORY</span>
+          <h3 class="font-display text-lg font-bold text-stone-900 tracking-wider uppercase">
+            Shri Balaji Jewellers
           </h3>
-          <div class="h-[1px] w-12 bg-gold-500/40 mx-auto mt-3"></div>
+          <div class="h-[1px] w-12 bg-gold-500/60 mx-auto mt-3"></div>
         </div>
 
-        <div class="space-y-4 text-xs text-zinc-400 font-light leading-relaxed mb-6">
+        <div class="space-y-4 text-xs text-stone-600 font-light leading-relaxed mb-6">
           <p>
-            Established with a vision to deliver unparalleled transparency and premium aesthetic crafting in West Uttar Pradesh, Shri Balaji Jewellers (SBJ) has become a benchmark of faith. Our foundation rests on three pillars: **Trust, Purity, and Elegance**.
+            Established with a vision to deliver unparalleled transparency and premium aesthetic crafting in West Uttar Pradesh, Shri Balaji Jewellers (SBJ) has become a benchmark of faith. Our foundation rests on three pillars: <strong class="font-semibold text-stone-900">Trust, Purity, and Elegance</strong>.
           </p>
-          <div class="p-3.5 bg-zinc-950 rounded-xs border border-zinc-900 space-y-2">
-            <h4 class="font-display font-semibold text-[10px] text-gold-400 tracking-wider uppercase flex items-center gap-1.5">
-              <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+          <div class="p-4 bg-[#faf8f5] rounded-sm border border-stone-200 space-y-2">
+            <h4 class="font-display font-bold text-[10px] text-gold-700 tracking-wider uppercase flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-600"></i>
               <span>OUR QUALITY BENCHMARKS</span>
             </h4>
-            <p class="text-[11px] text-zinc-500 leading-normal">
+            <p class="text-[11px] text-stone-600 leading-normal font-light">
               Every gram of gold we supply is certified with official 22 Karat (916) or 24 Karat government BIS Hallmark seals. This guarantees that your jewellery holds its lifetime value, eligible for instant standard buybacks anywhere.
             </p>
           </div>
           <p>
             Whether you visit our showroom in Pilkhuwa to order classical Kundan chokers, invest in pure gold bars, or design light-weight sterling silver items for daily use, we treat every deal with extreme dignity. We believe in providing complete breakdowns of gold weight, stones weight, and making charges prior to invoicing.
           </p>
-          <div class="flex gap-4 pt-2 border-t border-zinc-900 text-[10px] font-mono text-zinc-500">
+          <div class="flex gap-4 pt-2 border-t border-stone-150 text-[10px] font-mono text-stone-400">
             <div class="flex items-center gap-1">
-              <i data-lucide="clock" class="text-gold-400 w-3 h-3"></i>
+              <i data-lucide="clock" class="text-gold-500 w-3 h-3"></i>
               <span>Open 10:30 AM &mdash; 08:30 PM (Mon-Sat)</span>
             </div>
           </div>
         </div>
 
-        <button onclick="toggleAboutModal(false)" class="w-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 font-display text-[10px] tracking-widest font-bold py-3 uppercase rounded-xs transition-colors cursor-pointer">
+        <button onclick="toggleAboutModal(false)" class="w-full bg-[#faf8f5] hover:bg-[#f3efe9] border border-stone-200 text-stone-700 hover:text-stone-900 font-display text-[10px] tracking-widest font-bold py-3 uppercase rounded-sm transition-colors cursor-pointer">
           CLOSE WINDOW
         </button>
       </div>
@@ -1077,15 +1006,11 @@
           name: 'Royal Polki Gold Choker',
           category: 'gold',
           description: 'Intricately handcrafted Polki choker necklace showcasing royal heritage craft with drop pearls.',
-          image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=800',
-          priceRange: '₹3,40,000 - ₹3,80,000',
-          purity: '22K BIS Hallmarked',
-          weightRange: '42g - 48g',
+          image: '\assets\catalogue\jewellery\jewellery11.png?auto=format&fit=crop&q=80&w=800',
           details: [
             '100% BIS Hallmarked Yellow Gold',
             'Traditional Rajasthan Jadau Craftsmanship',
             'Premium natural uncut Polki diamonds and fine cultured pearls',
-            'Adjustable silk thread back-cord (Dori) for a customized elegant fit'
           ]
         },
         {
@@ -1206,6 +1131,14 @@
       let activeFilter = 'all';
       let activeModalProduct = null;
 
+      // Real-time regional rates estimate (Indicative values for Pilkhuwa/NCR)
+      const localRates = {
+        gold24k: 79450, // per 10g
+        gold22k: 72830, // per 10g
+        gold18k: 59580, // per 10g
+        silver999: 94200 // per 1kg
+      };
+
       // 2. Reviews Dataset
       const reviewsList = [
         {
@@ -1251,164 +1184,8 @@
         }
       ];
       let currentHeroSlide = 0;
-
-      // --- LIVE GOLD & SILVER RATES ENGINE ---
-      let currentRates = {
-        gold24k: 7350, // per gram in INR (fallback)
-        gold22k: 6737, // per gram in INR (fallback)
-        gold18k: 5512, // per gram in INR (fallback)
-        silver: 89     // per gram in INR (fallback)
-      };
-
-      async function fetchLiveRates() {
-        const refreshBtn = document.getElementById('refresh-rates-btn');
-        const rateStatus = document.getElementById('rate-status');
-        if (refreshBtn) refreshBtn.classList.add('animate-spin');
-        if (rateStatus) rateStatus.textContent = 'Updating rates...';
-
-        let fetchedFromDirectAPI = false;
-        let usedCity = 'Delhi';
-
-        console.log("=== LIVE RATES ENGINE STARTED ===");
-        try {
-          // Fetch directly from Groww API
-          const selectedCity = document.getElementById('rate-city-select')?.value || 'Delhi';
-          console.log(`Selected target city for rates: ${selectedCity}`);
-
-          const goldUrl = "https://resources.groww.in/web-assets/json/growth/gold-rates.json";
-          const silverUrl = "https://resources.groww.in/web-assets/json/growth/silver-rates.json";
-
-          console.log(`Fetching gold from: ${goldUrl}`);
-          console.log(`Fetching silver from: ${silverUrl}`);
-
-          const goldResponse = await fetch(goldUrl);
-          const silverResponse = await fetch(silverUrl);
-
-          console.log(`Gold HTTP Status: ${goldResponse.status} (${goldResponse.statusText})`);
-          console.log(`Silver HTTP Status: ${silverResponse.status} (${silverResponse.statusText})`);
-
-          if (goldResponse.ok && silverResponse.ok) {
-            const goldData = await goldResponse.json();
-            const silverData = await silverResponse.json();
-
-            console.log("Gold data successfully parsed:", goldData);
-            console.log("Silver data successfully parsed:", silverData);
-
-            if (goldData && goldData.rates && silverData && silverData.rates) {
-              const goldEntry = goldData.rates.find(r => r.city.toLowerCase() === selectedCity.toLowerCase());
-              const silverEntry = silverData.rates.find(r => r.city.toLowerCase() === selectedCity.toLowerCase());
-
-              const finalGoldEntry = goldEntry || goldData.rates.find(r => r.city.toLowerCase() === 'delhi') || goldData.rates[0];
-              const finalSilverEntry = silverEntry || silverData.rates.find(r => r.city.toLowerCase() === 'delhi') || silverData.rates[0];
-
-              console.log("Selected gold entry:", finalGoldEntry);
-              console.log("Selected silver entry:", finalSilverEntry);
-
-              if (finalGoldEntry && finalSilverEntry) {
-                // todayPrice from Groww is per 2g for gold, per 3g for silver
-                const gold24kPerGram = finalGoldEntry.todayPrice;
-                const silverPerGram = finalSilverEntry.todayPrice;
-
-                //console.log(`Calculated Raw Per Gram Rates: Gold 24K = ₹${gold24kPerGram}/g, Silver = ₹${silverPerGram}/g`);
-
-                currentRates.gold24k = Math.round(gold24kPerGram);
-                currentRates.gold22k = Math.round(gold24kPerGram * 0.9167); // 22K (91.67% purity)
-                currentRates.gold18k = Math.round(gold24kPerGram * 0.75);   // 18K (75.00% purity)
-                currentRates.silver = Math.round(silverPerGram);
-
-                console.log("Updated state currentRates:", currentRates);
-
-                fetchedFromDirectAPI = true;
-                usedCity = finalGoldEntry.city;
-              }
-            }
-          }
-
-          if (!fetchedFromDirectAPI) {
-            throw new Error(`Could not parse rates from Groww response data. Gold status: ${goldResponse.status}, Silver status: ${silverResponse.status}`);
-          }
-
-          updateRatesUI();
-          calculateEstimate();
-          
-          if (rateStatus) {
-            const now = new Date();
-            rateStatus.textContent = `Updated: Today, ${now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} via Live Bullion (${usedCity})`;
-          }
-          console.log("=== LIVE RATES ENGINE COMPLETED SUCCESSFULLY ===");
-        } catch (error) {
-          console.error('Error fetching live gold rates:', error);
-          
-          // Keep offline default rates as static fallback
-          updateRatesUI();
-          calculateEstimate();
-          
-          if (rateStatus) {
-            rateStatus.textContent = 'Indicative store prices';
-            // Show a temporary console hint for debugging
-            console.warn("Rates engine fell back to static defaults. If this is a CORS block in your browser, it is because resources.groww.in does not allow direct cross-origin fetches in some browser sandboxes. Your static store rates remain fully interactive and functional!");
-          }
-        } finally {
-          if (refreshBtn) refreshBtn.classList.remove('animate-spin');
-        }
-      }
-
-      function updateRatesUI() {
-        // Update Gold 24K
-        document.getElementById('rate-gold24k-1g').innerHTML = `₹${currentRates.gold24k.toLocaleString('en-IN')} <span class="text-[9px] font-sans font-light text-zinc-500">/ 1g</span>`;
-        document.getElementById('rate-gold24k-10g').innerHTML = `₹${(currentRates.gold24k * 10).toLocaleString('en-IN')} <span class="text-[8px] font-sans text-zinc-500">/ 10g</span>`;
-        
-        // Update Gold 22K
-        document.getElementById('rate-gold22k-1g').innerHTML = `₹${currentRates.gold22k.toLocaleString('en-IN')} <span class="text-[9px] font-sans font-light text-zinc-500">/ 1g</span>`;
-        document.getElementById('rate-gold22k-10g').innerHTML = `₹${(currentRates.gold22k * 10).toLocaleString('en-IN')} <span class="text-[8px] font-sans text-zinc-500">/ 10g</span>`;
-        
-        // Update Gold 18K
-        document.getElementById('rate-gold18k-1g').innerHTML = `₹${currentRates.gold18k.toLocaleString('en-IN')} <span class="text-[9px] font-sans font-light text-zinc-500">/ 1g</span>`;
-        document.getElementById('rate-gold18k-10g').innerHTML = `₹${(currentRates.gold18k * 10).toLocaleString('en-IN')} <span class="text-[8px] font-sans text-zinc-500">/ 10g</span>`;
-        
-        // Update Silver
-        document.getElementById('rate-silver-1g').innerHTML = `₹${currentRates.silver.toLocaleString('en-IN')} <span class="text-[9px] font-sans font-light text-zinc-500">/ 1g</span>`;
-        document.getElementById('rate-silver-100g').innerHTML = `₹${(currentRates.silver * 100).toLocaleString('en-IN')} <span class="text-[8px] font-sans text-zinc-500">/ 100g</span>`;
-      }
-
-      function calculateEstimate() {
-        const metalType = document.getElementById('calc-metal').value;
-        const weight = parseFloat(document.getElementById('calc-weight').value) || 0;
-        const makingChargePercent = parseFloat(document.getElementById('calc-making').value) || 0;
-        
-        let ratePerGram = 0;
-        if (metalType === 'gold24k') ratePerGram = currentRates.gold24k;
-        else if (metalType === 'gold22k') ratePerGram = currentRates.gold22k;
-        else if (metalType === 'gold18k') ratePerGram = currentRates.gold18k;
-        else if (metalType === 'silver') ratePerGram = currentRates.silver;
-        
-        const metalCost = weight * ratePerGram;
-        const makingCharges = metalCost * (makingChargePercent / 100);
-        const subtotal = metalCost + makingCharges;
-        const gst = subtotal * 0.03;
-        const total = subtotal + gst;
-        
-        document.getElementById('calc-metal-cost').textContent = `₹${Math.round(metalCost).toLocaleString('en-IN')}`;
-        document.getElementById('calc-making-cost').textContent = `₹${Math.round(makingCharges).toLocaleString('en-IN')}`;
-        document.getElementById('calc-gst-cost').textContent = `₹${Math.round(gst).toLocaleString('en-IN')}`;
-        document.getElementById('calc-total-cost').textContent = `₹${Math.round(total).toLocaleString('en-IN')}`;
-      }
-      
-      function sendCalculatorWhatsApp() {
-        const metalType = document.getElementById('calc-metal').value;
-        const weight = document.getElementById('calc-weight').value;
-        const makingChargePercent = document.getElementById('calc-making').value;
-        const totalCost = document.getElementById('calc-total-cost').textContent;
-        
-        let metalLabel = '';
-        if (metalType === 'gold24k') metalLabel = '24K Pure Gold';
-        else if (metalType === 'gold22k') metalLabel = '22K Hallmarked Gold';
-        else if (metalType === 'gold18k') metalLabel = '18K Standard Gold';
-        else if (metalType === 'silver') metalLabel = '99.9% Fine Silver';
-        
-        const text = `Hello Shri Balaji Jewellers! I calculated an estimate on your website for *${weight}g* of *${metalLabel}* (with ${makingChargePercent}% making charges and 3% GST): *Total Estimate ${totalCost}*. Can I get more details on current catalog options matching this metal?`;
-        window.open(`https://wa.me/916396330055?text=${encodeURIComponent(text)}`, '_blank');
-      }
+      let currentShowroomSlide = 0;
+      const totalShowroomSlides = 3;
 
       // Initializer/Bootstrapper
       function initApp() {
@@ -1428,21 +1205,16 @@
         // Render Review dots
         renderReviewDots();
 
-        // Initialize Rates and default calculator estimate
-        updateRatesUI();
-        calculateEstimate();
-        fetchLiveRates();
-
         // Scroll spy header effect
         window.addEventListener('scroll', () => {
-          const header = document.getElementById('main-header');
-          if (!header) return;
+          const navContainer = document.getElementById('nav-container');
+          if (!navContainer) return;
           if (window.scrollY > 50) {
-            header.classList.add('bg-[#0a0a0ae0]', 'backdrop-blur-md', 'shadow-2xl', 'border-zinc-900', 'py-1');
-            header.classList.remove('border-transparent');
+            navContainer.classList.add('bg-[#faf8f5f0]', 'backdrop-blur-md', 'shadow-md', 'border-[#e7e2d6]', 'max-w-6xl', 'px-8');
+            navContainer.classList.remove('border-transparent', 'max-w-7xl', 'px-6');
           } else {
-            header.classList.remove('bg-[#0a0a0ae0]', 'backdrop-blur-md', 'shadow-2xl', 'border-zinc-900', 'py-1');
-            header.classList.add('border-transparent');
+            navContainer.classList.remove('bg-[#faf8f5f0]', 'backdrop-blur-md', 'shadow-md', 'border-[#e7e2d6]', 'max-w-6xl', 'px-8');
+            navContainer.classList.add('border-transparent', 'max-w-7xl', 'px-6');
           }
         });
 
@@ -1450,6 +1222,11 @@
         setInterval(() => {
           navigateHeroSlide(1);
         }, 6000);
+
+        // Auto-scroll Showroom Gallery
+        setInterval(() => {
+          navigateShowroomSlide(1);
+        }, 5000);
       }
 
       // Safe execution checking readyState to handle delayed module loading
@@ -1458,6 +1235,40 @@
       } else {
         initApp();
       }
+
+
+      // --- SHOWROOM GALLERY CAROUSEL CONTROLLER ---
+      function setShowroomSlide(idx) {
+        const prevSlide = document.getElementById(`showroom-slide-${currentShowroomSlide}`);
+        const prevDot = document.getElementById(`showroom-dot-${currentShowroomSlide}`);
+        if (prevSlide) {
+          prevSlide.classList.add('opacity-0', 'scale-105');
+          prevSlide.classList.remove('opacity-100', 'scale-100');
+        }
+        if (prevDot) {
+          prevDot.classList.remove('w-3', 'bg-gold-400');
+          prevDot.classList.add('w-1', 'bg-white/40');
+        }
+
+        currentShowroomSlide = idx;
+        const nextSlide = document.getElementById(`showroom-slide-${currentShowroomSlide}`);
+        const nextDot = document.getElementById(`showroom-dot-${currentShowroomSlide}`);
+        if (nextSlide) {
+          nextSlide.classList.remove('opacity-0', 'scale-105');
+          nextSlide.classList.add('opacity-100', 'scale-100');
+        }
+        if (nextDot) {
+          nextDot.classList.add('w-3', 'bg-gold-400');
+          nextDot.classList.remove('w-1', 'bg-white/40');
+        }
+      }
+
+      function navigateShowroomSlide(direction) {
+        let target = (currentShowroomSlide + direction) % totalShowroomSlides;
+        if (target < 0) target = totalShowroomSlides - 1;
+        setShowroomSlide(target);
+      }
+
 
       // --- HERO BANNER CONTROLLER ---
       function setHeroSlide(idx) {
@@ -1534,11 +1345,9 @@
         filters.forEach((f) => {
           const btn = document.getElementById(`filter-btn-${f}`);
           if (f === category) {
-            btn.classList.add('bg-gold-500', 'border-gold-500', 'text-black', 'shadow-lg');
-            btn.classList.remove('bg-transparent', 'border-zinc-800', 'text-zinc-400', 'hover:border-zinc-700', 'hover:text-zinc-200');
+            btn.className = "px-5 py-2.5 text-[9px] tracking-widest font-display font-bold transition-all duration-300 rounded-full border uppercase bg-stone-900 border-stone-900 text-white shadow-sm cursor-pointer";
           } else {
-            btn.classList.remove('bg-gold-500', 'border-gold-500', 'text-black', 'shadow-lg');
-            btn.classList.add('bg-transparent', 'border-zinc-800', 'text-zinc-400', 'hover:border-zinc-700', 'hover:text-zinc-200');
+            btn.className = "px-5 py-2.5 text-[9px] tracking-widest font-display font-bold transition-all duration-300 rounded-full border uppercase bg-transparent border-stone-200 text-stone-600 hover:border-stone-400 hover:text-stone-900 cursor-pointer";
           }
         });
 
@@ -1556,46 +1365,31 @@
 
         filtered.forEach((item) => {
           const card = document.createElement('div');
-          card.className = "bg-[#0a0a0c] border border-zinc-900 hover:border-gold-500/20 rounded-xs overflow-hidden group transition-all duration-300 hover:shadow-2xl flex flex-col justify-between";
+          card.className = "bg-white border border-[#e7e2d6] hover:border-gold-500/60 rounded-3xl overflow-hidden group transition-all duration-300 shadow-sm shadow-stone-100 hover:shadow-md flex flex-col justify-between";
           
           card.innerHTML = `
             <div>
-              <div class="relative aspect-square overflow-hidden bg-zinc-950">
-                <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer">
-                <span class="absolute top-3 left-3 bg-black/85 border border-gold-500/30 text-[9px] font-display tracking-widest text-gold-300 font-bold px-2 py-1 uppercase rounded-xs">
+              <div class="relative aspect-square overflow-hidden bg-stone-100 rounded-b-2xl">
+                <img src="${item.image}" alt="Shri Balaji Jewellers Exquisite Piece" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer">
+                <span class="absolute top-3 left-3 bg-white/95 border border-gold-500/30 text-[8px] font-display tracking-widest text-gold-700 font-bold px-2.5 py-1 uppercase rounded-full shadow-xs">
                   ${item.category}
                 </span>
-                <span class="absolute top-3 right-3 bg-black/85 border border-zinc-800 text-[9px] font-mono text-zinc-400 px-2 py-1 rounded-xs">
+                ${item.id ? `
+                <span class="absolute top-3 right-3 bg-stone-900/90 text-[8px] font-mono text-gold-300 px-2.5 py-1 rounded-full shadow-xs">
                   ${item.id}
                 </span>
+                ` : ''}
               </div>
               <div class="p-5">
-                <h4 class="font-display text-sm font-semibold text-gold-100 tracking-wider mb-2 group-hover:text-gold-300 transition-colors">
-                  ${item.name}
-                </h4>
-                <p class="text-xs text-zinc-400 font-light line-clamp-2 leading-relaxed mb-4">
-                  ${item.description}
+                <p class="text-xs text-stone-600 font-light line-clamp-3 leading-relaxed mb-1">
+                  ${item.description || 'Exquisite handcrafted jewellery piece, styled for timeless elegance.'}
                 </p>
-                <div class="flex justify-between items-center text-[11px] border-t border-zinc-900/60 pt-3">
-                  <div>
-                    <span class="block text-zinc-500 uppercase font-semibold text-[9px] tracking-wider">PURITY</span>
-                    <span class="font-semibold text-zinc-300 font-mono">${item.purity}</span>
-                  </div>
-                  <div class="text-right">
-                    <span class="block text-zinc-500 uppercase font-semibold text-[9px] tracking-wider">WEIGHT</span>
-                    <span class="font-semibold text-zinc-300 font-mono">${item.weightRange}</span>
-                  </div>
-                </div>
               </div>
             </div>
-            <div class="px-5 pb-5 pt-2 flex items-center gap-3">
-              <button onclick="openProductModal('${item.id}')" class="flex-1 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white py-2.5 px-3 rounded-xs text-[10px] font-display font-semibold tracking-widest flex items-center justify-center gap-1.5 transition-all duration-300 cursor-pointer">
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-                <span>VIEW DETAILS</span>
-              </button>
-              <button onclick="triggerDirectInquiry('${item.name}', '${item.id}', '${item.purity}', '${item.weightRange}')" class="flex-1 bg-gold-500 hover:bg-gold-400 text-black py-2.5 px-3 rounded-xs text-[10px] font-display font-bold tracking-widest flex items-center justify-center gap-1.5 transition-all duration-300 shadow-sm cursor-pointer">
+            <div class="px-5 pb-5 pt-2">
+              <button onclick="triggerDirectInquiry('${item.name}', '${item.id || ''}', '${item.purity || ''}', '${item.weightRange || ''}')" class="w-full bg-gold-500 hover:bg-gold-400 text-black py-2.5 px-4 rounded-full text-[10px] font-display font-bold tracking-widest flex items-center justify-center gap-1.5 transition-all duration-300 shadow-sm cursor-pointer">
                 <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-current"></i>
-                <span>WHATSAPP</span>
+                <span>INQUIRE ON WHATSAPP</span>
               </button>
             </div>
           `;
@@ -1608,13 +1402,23 @@
 
       // --- WHATSAPP REDIRECT ENGINE ---
       function triggerDirectInquiry(name, id, purity, weight) {
-        const text = `Hello Shri Balaji Jewellers! I saw your stunning design *${name} (${id})* on your website and would like to receive pricing and availability details. Purity: ${purity}. Weight: ${weight}.`;
+        let text = `Hello Shri Balaji Jewellers! I saw your stunning design *${name}*`;
+        if (id) {
+          text += ` (*${id}*)`;
+        }
+        text += ` on your website and would like to receive pricing and availability details.`;
+        if (purity && purity !== 'undefined') {
+          text += ` Purity: ${purity}.`;
+        }
+        if (weight && weight !== 'undefined') {
+          text += ` Weight: ${weight}.`;
+        }
         window.open(`https://wa.me/916396330055?text=${encodeURIComponent(text)}`, '_blank');
       }
 
       function triggerWhatsAppInquiry() {
         if (!activeModalProduct) return;
-        triggerDirectInquiry(activeModalProduct.name, activeModalProduct.id, activeModalProduct.purity, activeModalProduct.weightRange);
+        triggerDirectInquiry(activeModalProduct.name, activeModalProduct.id || '', activeModalProduct.purity || '', activeModalProduct.weightRange || '');
       }
 
       // --- PRODUCT OVERLAY DETAIL MODAL ---
@@ -1626,21 +1430,52 @@
 
         document.getElementById('modal-img').src = product.image;
         document.getElementById('modal-badge').textContent = product.category;
-        document.getElementById('modal-id').textContent = product.id;
+        document.getElementById('modal-id').textContent = product.id || 'SBJ-ITEM';
         document.getElementById('modal-title').textContent = product.name;
-        document.getElementById('modal-desc').textContent = product.description;
-        document.getElementById('modal-purity').textContent = product.purity;
-        document.getElementById('modal-weight').textContent = product.weightRange;
+        document.getElementById('modal-desc').textContent = product.description || 'Exquisite handcrafted jewellery piece, designed with timeless precision and certified quality.';
 
-        // Render bullet lists
+        // Handle purity display in modal
+        const purityContainer = document.getElementById('modal-purity-container');
+        if (product.purity) {
+          document.getElementById('modal-purity').textContent = product.purity;
+          purityContainer.style.display = 'block';
+        } else {
+          purityContainer.style.display = 'none';
+        }
+
+        // Handle weight display in modal
+        const weightContainer = document.getElementById('modal-weight-container');
+        if (product.weightRange) {
+          document.getElementById('modal-weight').textContent = product.weightRange;
+          weightContainer.style.display = 'block';
+        } else {
+          weightContainer.style.display = 'none';
+        }
+
+        // Handle entire specs container row
+        const specsContainer = document.getElementById('modal-specs-container');
+        if (!product.purity && !product.weightRange) {
+          specsContainer.style.display = 'none';
+        } else {
+          specsContainer.style.display = 'grid';
+        }
+
+        // Render bullet lists (if details are available)
         const listContainer = document.getElementById('modal-bullet-list');
+        const detailsContainer = document.getElementById('modal-details-container');
         listContainer.innerHTML = '';
-        product.details.forEach((detail) => {
-          const li = document.createElement('li');
-          li.className = "flex items-start gap-2";
-          li.innerHTML = `<span class="text-gold-500 mt-0.5">•</span><span>${detail}</span>`;
-          listContainer.appendChild(li);
-        });
+        
+        if (product.details && product.details.length > 0) {
+          detailsContainer.style.display = 'block';
+          product.details.forEach((detail) => {
+            const li = document.createElement('li');
+            li.className = "flex items-start gap-2";
+            li.innerHTML = `<span class="text-gold-500 mt-0.5">•</span><span>${detail}</span>`;
+            listContainer.appendChild(li);
+          });
+        } else {
+          detailsContainer.style.display = 'none';
+        }
 
         // Show modal container
         const modal = document.getElementById('product-modal');
@@ -1764,12 +1599,10 @@
       }
 
       // Bind all interactive functions to window scope for HTML inline handlers to work in ES module
-      window.fetchLiveRates = fetchLiveRates;
-      window.updateRatesUI = updateRatesUI;
-      window.calculateEstimate = calculateEstimate;
-      window.sendCalculatorWhatsApp = sendCalculatorWhatsApp;
       window.setHeroSlide = setHeroSlide;
       window.navigateHeroSlide = navigateHeroSlide;
+      window.setShowroomSlide = setShowroomSlide;
+      window.navigateShowroomSlide = navigateShowroomSlide;
       window.scrollToSection = scrollToSection;
       window.toggleMobileMenu = toggleMobileMenu;
       window.setCollectionFilter = setCollectionFilter;
