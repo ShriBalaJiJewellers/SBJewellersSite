@@ -1,17 +1,7 @@
-# Global rules for all search engines
+# robots.txt for SBJ Jewellers
+
 User-agent: *
-Disallow: /cgi-bin/
-Disallow: /admin/
-Disallow: /config/
-Disallow: /search?   # Prevents crawl waste from internal search filters
-Allow: /             # Allows full crawling of all front-facing jewellery collections
+Allow: /
 
-# Protect website content from unauthorized AI scrapers
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-# Direct bots to your website's main XML sitemap index
-Sitemap: https://sbjjewellers.com
+# Sitemap
+Sitemap: https://www.sbjjewellers.com/sitemap.xml
