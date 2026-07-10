@@ -444,9 +444,13 @@
           <!-- Card 1: Owner -->
           <div class="bg-white border border-[#e7e2d6] p-7 md:p-8 rounded-[32px] flex flex-col md:flex-row gap-6 items-center shadow-lg relative group hover:border-gold-500/40 transition-all duration-300">
             <div class="w-full md:w-2/5 aspect-[3/4] md:aspect-auto md:h-64 rounded-2xl overflow-hidden bg-stone-100 shrink-0 relative border border-[#e7e2d6]/60">
-              <!-- Note: This image is a placeholder. You can easily replace this Unsplash URL with your own owner photograph once captured! -->
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600" alt="Aman Verma - Shri Balaji Jewellers Owner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer">
-              <div class="absolute inset-0 bg-gradient-to-t from-stone-950/20 via-transparent to-transparent opacity-60"></div>
+              <!-- Owner Portrait supporting high quality HEIC and standard JPG fallback -->
+              <picture class="w-full h-full block">
+                <source srcset="/assets/catalogue/ownerandshop/OwnerShiBalaJiJewellers.HEIC" type="image/heic">
+                <source srcset="/assets/catalogue/ownerandshop/OwnerShiBalaJiJewellers.jpg" type="image/jpeg">
+                <img src="/assets/catalogue/ownerandshop/OwnerShiBalaJiJewellers.jpg" alt="Aman Verma - Shri Balaji Jewellers Owner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer">
+              </picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-950/20 via-transparent to-transparent opacity-60 pointer-events-none"></div>
             </div>
             <div class="flex flex-col justify-between h-full">
               <div>
@@ -470,9 +474,9 @@
             <div class="w-full md:w-2/5 aspect-[3/4] md:aspect-auto md:h-64 rounded-2xl overflow-hidden bg-stone-100 shrink-0 relative border border-[#e7e2d6]/60">
               <!-- Showroom Slides -->
               <div class="relative w-full h-full">
-                <img id="showroom-slide-0" src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600" alt="Shri Balaji Jewellers Showroom Pilkhuwa - Exclusive Displays" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 opacity-100 scale-100" referrerpolicy="no-referrer">
-                <img id="showroom-slide-1" src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&q=80&w=600" alt="Shri Balaji Jewellers Showroom Pilkhuwa - Exquisite Craft" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 opacity-0 scale-105" referrerpolicy="no-referrer">
-                <img id="showroom-slide-2" src="https://images.unsplash.com/photo-1588444839799-eb6cd27e3e26?auto=format&fit=crop&q=80&w=600" alt="Shri Balaji Jewellers Showroom Pilkhuwa - Luxury Lounge" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 opacity-0 scale-105" referrerpolicy="no-referrer">
+                <img id="showroom-slide-0" src="/assets/catalogue/ownerandshop/ShopImage1.jpeg" alt="Shri Balaji Jewellers Showroom Pilkhuwa - Exclusive Displays" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 opacity-100 scale-100" referrerpolicy="no-referrer">
+                <img id="showroom-slide-1" src="/assets/catalogue/ownerandshop/ShopImage2.jpeg" alt="Shri Balaji Jewellers Showroom Pilkhuwa - Exquisite Craft" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 opacity-0 scale-105" referrerpolicy="no-referrer">
+                <img id="showroom-slide-2" src="/assets/catalogue/ownerandshop/ShopImage3.jpeg" alt="Shri Balaji Jewellers Showroom Pilkhuwa - Luxury Lounge" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 opacity-0 scale-105" referrerpolicy="no-referrer">
               </div>
               
               <!-- Dark Overlay -->
@@ -1006,7 +1010,9 @@
           name: 'Royal Polki Gold Choker',
           category: 'gold',
           description: 'Intricately handcrafted Polki choker necklace showcasing royal heritage craft with drop pearls.',
-          image: '/assets/catalogue/jewellery/jewellery1.png?auto=format&fit=crop&q=80&w=800',
+          image: '/assets/catalogue/jewellery/jewellery1.png',
+          purity: '22K BIS Hallmarked',
+          weightRange: '42g - 48g',
           details: [
             '100% BIS Hallmarked Yellow Gold',
             'Traditional Rajasthan Jadau Craftsmanship',
@@ -1018,7 +1024,7 @@
           name: 'Temple Kundan Necklace',
           category: 'gold',
           description: 'Classic antique gold finish necklace featuring Laxmi motif encrusted with rich red Kundan stones.',
-          image: 'https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&q=80&w=800',
+          image: '/assets/catalogue/jewellery/jewellery2.png',
           priceRange: '₹4,60,000 - ₹5,10,000',
           purity: '22K BIS Hallmarked',
           weightRange: '58g - 65g',
@@ -1034,7 +1040,7 @@
           name: 'Filigree Gold Kada Bangles',
           category: 'gold',
           description: 'Delicate openwork gold kada bangles designed with high precision filigree floral patterns.',
-          image: 'https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&q=80&w=800',
+          image: '/assets/catalogue/jewellery/jewellery3.png',
           priceRange: '₹1,80,000 - ₹2,10,000',
           purity: '22K BIS Hallmarked',
           weightRange: '24g - 28g (Pair)',
@@ -1050,7 +1056,7 @@
           name: 'Royal Handcrafted Silver Kada',
           category: 'silver',
           description: 'Traditional solid silver heavy kada bracelet styled with exquisite hand-carved animal motifs.',
-          image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=800',
+          image: '/assets/catalogue/jewellery/jewellery4.png',
           priceRange: '₹4,500 - ₹6,000',
           purity: '92.5% Sterling Silver',
           weightRange: '35g - 45g',
@@ -1066,7 +1072,7 @@
           name: 'Oxidized Silver Jhumkas',
           category: 'silver',
           description: 'Stunning tiered sterling silver dangling dome earrings with mini hanging metallic balls.',
-          image: 'https://images.unsplash.com/photo-1611085583191-a3b1a30a8a3a?auto=format&fit=crop&q=80&w=800',
+          image: '/assets/catalogue/jewellery/jewellery5.png',
           priceRange: '₹2,200 - ₹3,500',
           purity: '92.5% Sterling Silver',
           weightRange: '14g - 18g (Pair)',
@@ -1082,7 +1088,7 @@
           name: 'Guttapusalu Silver Choker',
           category: 'silver',
           description: 'Elegant South Indian style silver choker necklace lined with high grade pearl clusters and red stones.',
-          image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=800',
+          image: '/assets/catalogue/jewellery/jewellery6.png',
           priceRange: '₹12,000 - ₹15,000',
           purity: '92.5% Sterling Silver',
           weightRange: '60g - 70g',
@@ -1098,7 +1104,7 @@
           name: 'Nizam-e-Khaas Jadau Haar',
           category: 'bridal',
           description: 'A magnificent royal bridal multi-layered kundan and emerald long necklace set fit for royalty.',
-          image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=800',
+          image: '/assets/catalogue/jewellery/jewellery7.png',
           priceRange: '₹9,500 - ₹12,000 (Approx USD)',
           purity: '22K BIS Hallmarked',
           weightRange: '110g - 130g',
@@ -1114,7 +1120,7 @@
           name: 'Sabyasachi Style Bridal Set',
           category: 'bridal',
           description: 'Grand heavy choker piece featuring high-grade emerald beads, uncut diamond polkis and meenakari backwork.',
-          image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=800',
+          image: '/assets/catalogue/jewellery/jewellery8.png',
           priceRange: '₹12,00,000 - ₹15,00,000',
           purity: '22K BIS Hallmarked',
           weightRange: '140g - 165g',
@@ -1123,6 +1129,62 @@
             'Royal mint-green and red hand-painted Meenakari work on reverse side',
             'Finest selected hand-sliced Polki gemstones',
             'Perfect centerpiece for heavy bridal attire'
+          ]
+        },
+        {
+          id: 'SBJ-G04',
+          name: 'Royal Antique Gokhru Kada',
+          category: 'gold',
+          description: 'Traditional heavy gold Gokhru-style thick kada bangles decorated with tiny spikes and delicate engravings.',
+          image: '/assets/catalogue/jewellery/jewellery9.png',
+          purity: '22K BIS Hallmarked',
+          weightRange: '45g - 52g',
+          details: [
+            'BIS certified 916 purity yellow gold core',
+            'Traditional Rajasthan heritage Gokhru structure',
+            'Stunning handmade screw lock mechanism for secure wear'
+          ]
+        },
+        {
+          id: 'SBJ-G05',
+          name: 'Heritage Mangalsutra Set',
+          category: 'gold',
+          description: 'A gorgeous modern-classic gold mangalsutra featuring certified black diamond beads and a floral pendant.',
+          image: '/assets/catalogue/jewellery/jewellery10.png',
+          purity: '22K BIS Hallmarked',
+          weightRange: '18g - 22g',
+          details: [
+            'High-purity BIS 22K yellow gold pendant',
+            'Hand-selected protective black spinels and diamond accents',
+            'Durable box chain layout with flexible adjuster rings'
+          ]
+        },
+        {
+          id: 'SBJ-S04',
+          name: 'Traditional Royal Silver Payal',
+          category: 'silver',
+          description: 'Stunning heavy wedding payal ankle bracelets crafted in pure silver with dangling bells and chain patterns.',
+          image: '/assets/catalogue/jewellery/jewellery11.png',
+          purity: '92.5% Sterling Silver',
+          weightRange: '80g - 120g (Pair)',
+          details: [
+            'Thick multi-chain standard silver layout',
+            'Traditional Indian Ghungroo bells with melodious sound',
+            'S-hook secure closure with sturdy joint soldering'
+          ]
+        },
+        {
+          id: 'SBJ-B03',
+          name: 'Maharani Jadau Bridal Nath',
+          category: 'bridal',
+          description: 'Exquisite traditional nose ring styled with fine Kundan setting, fresh pearls and a long delicate hair-chain.',
+          image: '/assets/catalogue/jewellery/jewellery12.png',
+          purity: '22K BIS Hallmarked',
+          weightRange: '8g - 12g',
+          details: [
+            'Elegant lightweight design with absolute comfort hoop hook',
+            'Embellished with high quality emerald beads and certified natural pearls',
+            'Hand-woven gold chain to tuck beautifully behind the ear'
           ]
         }
       ];
